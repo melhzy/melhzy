@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @melhzy.
 - 👀 I’m interested in building neural networks from scratch.
-- 🌱 I’m currently learning large language model implementation in Alzheimer's disease.
-- 💞️ I’m looking to collaborate on deep learning.
+- 🌱 I’m currently implementing large language model techniques in Alzheimer's disease research.
+- 💞️ I’m looking to collaborate on deep learning and AI.
 - 📫 I'm reachable through melhzy@gmail.com.
 
 <!---
