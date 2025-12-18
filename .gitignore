@@ -4,6 +4,9 @@ Grant_Applications/
 # PDF conversion script (temporary)
 **/pdf_to_txt.py
 
+# Exclude specific review paper
+My_Publications/2025/review/
+
 # OS generated files
 .DS_Store
 .DS_Store?

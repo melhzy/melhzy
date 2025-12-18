@@ -1,45 +1,58 @@
 # Ziyuan Huang, PhD
 
 **Postdoctoral Associate** | UMass Chan Medical School  
-**Research Focus**: AI-Driven Alzheimer's Disease Research
+PhD in Data Sciences | Greater Boston
 
 ## About Me
 
-I develop multimodal AI systems for Alzheimer's disease (AD) research, integrating microbiome, immune, metabolomic, and clinical data to advance diagnosis, prediction, and mechanistic understanding. My work bridges computational biology, machine learning, and translational neuroscience.
+I apply artificial intelligence and deep learning to advance understanding of Alzheimer's disease and complex heterogeneous conditions. My research integrates multimodal data—microbiome profiles, blood biomarkers, immune measures, metabolomics, clinical records, and scientific literature—using statistical learning, machine learning, and large language models. I develop frameworks that combine computational approaches with biological insights to improve disease understanding and inform future therapeutic strategies for neurodegenerative diseases.
 
-## Current Projects
+## Research Program
 
-**ADAM (Alzheimer's Disease Analysis Model)**: A multi-agent AI reasoning system combining large language models with ensemble machine learning to:
-- Integrate gut/oral microbiomes, immune profiles, metabolomics, and peripheral biomarkers
-- Generate biologically interpretable, literature-grounded insights for AD classification
-- Achieve reproducible performance (AUC ≥0.80, F1 ≥0.70) with SHAP-based explainability
+### ADAM (Alzheimer's Disease Analysis Model)
 
-**Key Research Areas**:
-- Oral-gut microbial axis in cognitive decline
+**ADAM-1** (published IEEE Access, 2025): Multi-agent reasoning framework combining large language models with ensemble classifiers for AD classification, integrating microbiome and clinical data with explainable AI.
+
+**ADAM-2** (in development): Expanding to oral/gut microbiomes, peripheral biomarkers, immune profiles, metabolomics, and neuroimaging within the ATN (Amyloid/Tau/Neurodegeneration) framework. Fine-tuning domain-specific language models using LoRA/QLoRA with retrieval-augmented generation.
+
+**Performance Standards**: Reproducible classification (AUC ≥0.80, F1 ≥0.70) with SHAP-based interpretability and literature concordance ≥80%.
+
+### Key Research Areas
+- Oral-gut microbial axis in cognitive decline and systemic inflammation
 - Multimodal data integration for AD biomarker discovery
-- Explainable AI for clinical applications
+- Explainable AI with biologically interpretable, literature-grounded insights
 - Systems-level modeling of microbiome-immune-brain interactions
 
 ## Technical Expertise
 
-- **AI/ML**: Large language models, ensemble methods, graph neural networks, interpretable ML
-- **Computational Biology**: Metagenomic analysis, multi-omics integration, systems modeling
-- **Tools**: Python, R, PyTorch, Hugging Face Transformers, SHAP, HPC workflows
+- **AI/ML**: Large language models (fine-tuning, RAG), ensemble methods (Random Forest, XGBoost, LightGBM), graph neural networks, explainable AI (SHAP)
+- **Computational Biology**: Metagenomic sequencing analysis, multi-omics integration, systems modeling, differential abundance methods
+- **Infrastructure**: GPU-accelerated workstations (NVIDIA H200), HPC clusters, containerization, version control, reproducible workflows
+- **Tools**: Python, R, PyTorch, Hugging Face Transformers, QIIME2, MetaPhlAn, scikit-learn
 
-## Publications
+## Publications & Impact
 
-Recent work includes ADAM-1 (IEEE Access, 2025), oral-gut microbiome axis studies, and multimodal graph neural networks for AD research. See [My_Publications/](My_Publications/) for details.
+Contributing to federally-funded projects developing computational platforms for multimodal biomedical data analysis. Published peer-reviewed research on AI disease classification, microbiome analysis, and graph neural networks. Collaborating across clinical departments to analyze longitudinal patient data from large cohorts (GAINS: 260+ participants).
 
-## Collaboration
+Recent publications include:
+- ADAM-1 framework (IEEE Access, 2025)
+- Oral-gut microbiome axis in AD (AAIC 2025)
+- Multimodal graph neural networks for AD research
+- Genetic networks and urinary microbiome studies
+
+See [My_Publications/](My_Publications/) for full list.
+
+## Collaboration Interests
 
 I'm interested in collaborations involving:
 - Multimodal AI for biomedical applications
 - Microbiome-brain axis research
 - Explainable AI in clinical settings
 - Deep learning for neurodegenerative diseases
+- Open-source platforms for data harmonization and interpretable analysis
 
 📫 **Contact**: melhzy@gmail.com
 
 ---
 
-*This repository contains grant applications, publications, and computational tools from my Alzheimer's disease research program.*
+*This repository contains grant applications, publications, and computational tools from my Alzheimer's disease research program at UMass Chan Medical School.*
