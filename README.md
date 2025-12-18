@@ -5,7 +5,7 @@ PhD in Data Sciences | Greater Boston
 
 ## About Me
 
-I apply artificial intelligence and deep learning to advance understanding of Alzheimer's disease and complex heterogeneous conditions. My research integrates multimodal data—microbiome profiles, blood biomarkers, immune measures, metabolomics, clinical records, and scientific literature—using statistical learning, machine learning, and large language models. I develop frameworks that combine computational approaches with biological insights to improve disease understanding and inform future therapeutic strategies for neurodegenerative diseases.
+I apply artificial intelligence and deep learning to advance understanding of Alzheimer's disease and complex heterogeneous conditions. My research integrates multimodal data, such as microbiome profiles, blood biomarkers, immune measures, metabolomics, clinical records, and scientific literature, using statistical learning, machine learning, and large language models. I develop frameworks that combine computational approaches with biological insights to improve disease understanding and inform future therapeutic strategies for neurodegenerative diseases.
 
 ## Research Program
 
