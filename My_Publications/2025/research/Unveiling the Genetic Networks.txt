@@ -1,0 +1,1392 @@
+
+================================================================================
+PAGE 1
+================================================================================
+
+Plant Physiology and Biochemistry 221 (2025) 109616
+Available online 7 February 2025
+0981-9428/© 2025 Elsevier Masson SAS. All rights are reserved, including those for text and data mining, AI training, and similar technologies.Unveiling the genetic networks: Exploring the dynamic interaction of 
+photosynthetic phenotypes in woody plants across varied light gradients
+Kaiyan Lua,1, Ziyang Zhoua,1, Ziyuan Huangb,1
+, Chenhao Buc,1, Huiying Gongc,1,  
+Libo Jiangd, Deqiang Zhangc, Qing Fange
+, Xiao-Yu Zhanga,*, Yuepeng Songc,**
+aCollege of Science, Beijing Forestry University, No. 35, Qinghua East Road, 100083, Beijing, PR China
+bDepartment of Emergency Medicine, University of Massachusetts Chan Medical School, 368 Plantation St, 01605-2324, Worcester, MA, USA
+cCollege of Biological Sciences and Technology, Beijing Forestry University, No. 35, Qinghua East Road, 100083, Beijing, PR China
+dSchool of Life Sciences and Medicines, Shandong University of Technology, No. 266, Xincun West Road, Shandong Province, 255049, Zibo, PR China
+eFaculty of Science, Yamagata University, Yamagata, 990, Japan
+ARTICLE INFO
+Keywords:
+photosynthesis
+Differential equations
+QTL mapping
+Interaction
+Genetic network
+Populus simoniiABSTRACT
+Understanding the mechanisms by which genes control and regulate complex quantitative traits during periods 
+of fluctuating resources remains a challenging and uncertain task in photosynthesis studies. Most studies have 
+focused on the structure of photosynthesis, the photosynthetic response under stress, or the genetic mechanisms 
+involved in photosynthetic effects and neglected the interactive genetic mechanism that governs various traits 
+through significant quantitative trait loci (QTLs).
+In this study, we have developed a differential dynamic system that enables the identification of QTLs based on 
+the photosynthetic phenotypic and genotypic data under varying levels of light intensity gradients. The frame -
+work not only allows for the assessment of the direct effects of QTLs on phenotypes but also captures how they 
+influence interactions among phenotypes as light intensities change. We have analyzed the genetic effects and 
+genetic variance, visualized the genetic network associated with photosynthesis interactions, and validated the 
+effectiveness and stability of the DDS framework. Pivotal pleiotropic QTLs were identified individually to un-
+cover the process and pattern of interaction. Through functional annotation, we made an intriguing discovery 
+that seemingly unimportant QTLs can still have significant genetic effects on phenotypic changes through their 
+regulation with other QTLs. This finding emphasizes the significance of considering the interactive genetic ar-
+chitecture when seeking to understand the genetic interaction mechanism of photosynthesis in natural pop-
+ulations of woody plants. Moreover, our research provides a novel framework that can be extended to explore the 
+interactive genetic architecture among organisms, contributing to a deeper understanding of stress resistance 
+mechanisms in woody plants.
+1.Introduction
+The genetic capabilities of plants enable them to adapt to various 
+environmental conditions, including salt stress, drought stress, light 
+stress, and more. Developing a comprehensive understanding of the 
+genetic mechanisms operating under variable environments is crucial 
+for advancing the research and cultivation of woody plants. Enhancing 
+the efficiency of photosynthesis stands at the forefront of forest genetics 
+and breeding as a key area of focus. Despite substantial efforts to explore photosynthesis, most studies focus on evaluating the overall changes of 
+individual traits, rather than revealing the interactions among different 
+traits (Evans, 2013 ; Petroutsos et al., 2016 ; Sharwood et al., 2016 ; van 
+Rooijen et al., 2017 ; Bailey-Serres et al., 2019 ; Yoo et al., 2019 ; Heyduk 
+et al., 2019 ; Nam et al., 2021 ; Baikie et al., 2023 ). The chlorophyll 
+fluorescence parameters are of great significance, including maximal 
+Fluorescence (Fm), Electron Transfer Rate (ETR), Quantum Photo -
+chemical Yield (Yield), Photochemical Quenching Coefficient (qP), and 
+Non-Photochemical Quenching coefficient (qN). Many explorations 
+*Corresponding author.
+**Corresponding author.
+E-mail addresses: xyzhang@bjfu.edu.cn (X.-Y. Zhang), YuepengSong@bjfu.edu.cn (Y. Song). 
+URL: https://orcid.org/0000-0002-2794-3848 (X.-Y. Zhang), https://orcid.org/0000-0001-8946-6437 (Y. Song).   
+1Share first authorship.
+Contents lists available at ScienceDirect
+Plant Physiology and Biochemistry
+u{�~zkw! s{yo| kro>! ÐÐÐ1ow �o�to~1m{y2w {mk�o2|wk|sÞ
+https://doi.org/10.1016/j.plaphy.2025.109616
+Received 13 October 2024; Received in revised form 21 January 2025; Accepted 6 February 2025  
+================================================================================
+PAGE 2
+================================================================================
+
+Plant Physiology and Biochemistry 221 (2025) 109616
+2primarily focus on plant photosynthetic characteristics, adversity stress, 
+seed selection, breeding, and other related areas (Zhang et al., 2020 ; 
+Zhao et al., 2017 ; Herlory et al., 2013 ; Jian et al., 2020 ; de Oliveira 
+Santos et al., 2021 ; Perner, F. et al., 2023 ). However, gaining a 
+comprehensive understanding of how chlorophyll fluorescence param -
+eters interact to control photosynthesis is a timely and vital undertaking. 
+This endeavor significantly contributes to improving our knowledge of 
+the genetic processes involved in photosynthesis. Furthermore, con-
+structing an interaction genetic network of chlorophyll fluorescence 
+parameters holds great value as it allows for the exploration of the un-
+derlying genetic mechanisms of photosynthesis from multiple perspec -
+tives (Flood et al., 2011 ). Photosynthesis in nature involves complex 
+chemical reactions and physiological processes. Currently, a wide range 
+of classical methods is available for analyzing unknown genetic mech -
+anisms, including interval mapping based on linkage analysis, 
+whole-genome association analysis (GWAS), and more (Lander and 
+Botstein, 1989 ; Zeng, 1994 ; Risch et al., 1996 ; Zhu, 1999 ; Barton and 
+Keightley, 2002 ; Klein et al., 2005 ; Wu et al., 2007 ; Li et al., 2008 ; 
+Mackay, 2014 ; Zhu et al., 2016 ; Fang et al., 2017 ; Farooq et al., 2018 ; 
+Sun et al., 2018 ; Tang et al., 2018 ; Li et al., 2019 ; Hazzouri et al., 2019 ; 
+Fernandes et al., 2020 ; Cai et al., 2021 ; Zhang, J. et al., 2021 ; Zhang, Y. 
+et al., 2021 ; Chen et al., 2022 ; Scholz et al., 2022 ; Sun et al., 2022 ; de 
+Klein et al., 2023 ; Khunsriraksakul et al., 2023 ; Li et al., 2023 ).
+The methods mentioned above mainly focus on a single phenotype; 
+however, it is vital to acknowledge the interactions among multiple 
+phenotypes that aim to optimize photosynthetic efficiency and minimize 
+light loss within the process of photosynthesis. These interactions form 
+complex networks between phenotypes and genotypes (Stachowicz, 
+2001 ; Agrawal, 2001 ; Bieluszewski et al., 2022 ; Wang et al., 2022 ). In 
+addition, functional mapping, through the integration of mathematical 
+functions, can effectively capture the developmental features of complex 
+traits (Jiang et al., 2018 ; Fu et al., 2018 ; Dong et al., 2023 ). In recent 
+years, there has been a growing promotion of functional mapping to-
+wards system mapping. This approach allows for the exploration of two 
+or more phenotypes by treating the entire set of phenotypes as a system. 
+By employing a group of ordinary differential equations (ODEs), the 
+interaction patterns can be detected. Notable studies that have 
+employed this approach include those conducted by Ma et al., (2002) , 
+Wu and Lin (2006) , Wu et al. (2011) , Bo et al. (2014) , Sun and Wu 
+(2015) and Zhou et al. (2023) .
+In this paper, we focus on studying the chlorophyll fluorescence 
+parameters in a natural population of Populus simonii under different 
+gradient light intensities. Given the complexity and diversity of natural 
+populations, our proposal involves the utilization of a differential dy-
+namic system (DDS) to delve into the genetic mechanism of dynamic 
+interactions during the process of photosynthesis. DDS not only employs 
+differential equations to model the interaction between two phenotypes 
+but also integrates optimized system mapping to capture the dynamic 
+changes of phenotypes across multiple stages, identifying the genetic 
+loci most likely to influence these changes. To validate the practical 
+application of the DDS framework, we selected highly related pheno -
+types, ETR and qN (Fig. S1). We then describe and explain how pivotal 
+pleiotropic QTLs influence the trends of photosynthesis-related pheno -
+types and construct their networks to elucidate the genetic mechanisms 
+underlying their internal interactions. In total, 250 and 78 pivotal 
+pleiotropic QTLs were identified, governing both competition and 
+collaboration within the process of photosynthesis. The accuracy of our 
+model is confirmed through rigorous validation using computer simu-
+lations. Our research presents a robust tool for the selection of varieties 
+and the exploration of genetic mechanisms in diverse environmental 
+conditions.2.Materials & methods
+2.1. Plants, growth conditions, and sampling
+We applied a set of experimental data from Populus simonii to validate 
+the utility of the DDS model. Native individual branches of Populus 
+simonii were collected from various regions throughout the species ’ 
+natural distribution range, including 9 provinces and 17 cities in 
+northern China. All samples were planted in a randomized complete 
+block design with several clonal replicates, spaced at 3 m ×4 m in 
+Guanxian, Liaocheng, Shandong Province (36•29′89″N, 115•27′34″E). 
+These samples were stored in low-temperature stratified sand in a clonal 
+arboretum for cutting propagation in the next year. In the second year, 
+cuttings were propagated and 102 samples (three seedlings with optimal 
+growth for each sample) with similar annual growth trends were 
+selected and transplanted into flowerpots. They were then cultured in a 
+greenhouse at Beijing Forestry University, Beijing, China (40•0′N, 
+116•20′E). Phenotypic measurements were performed using a chloro -
+phyll fluorescence meter (pam-2100) one week after planting. For each 
+sample, the 3rd to 5th mature leaves from top to bottom were selected 
+for measurement. During the measurement process, 11 segments of 
+excitation light with gradually increasing intensities were selected to 
+irradiate the leaves. The 11 light intensities are: 7.3887, 47.1704, 
+82.6482, 133.0713, 214.3032, 347.6767, 498.9641, 769.0832, 
+1144.9921, 1722.707, 2677.758 μmol≡m 2≡s 1. The chlorophyll 
+fluorescence phenotypes were measured after each excitation light 
+irradiation. Each leaf was measured three times, and the average value 
+was recorded. During the experiment, the temperature was steadily kept 
+at 24 •C, with a standard deviation of 1 •C. During measurements, the 
+humidity was maintained between 20% and 40%.
+2.2. Genomic DNA extraction and sequencing
+Fresh leaves from 120 individuals in the association population were 
+collected for genomic DNA extraction. The genomic DNA was re- 
+sequenced using an Illumina GA2 platform, achieving an average 
+sequencing depth of 30 ×. Library preparation was performed in 
+accordance with the manufacturer ’s guidelines (Illumina). Paired-end 
+reads of 150 bp were generated, with low-quality reads (those with 
+≽50% nucleotides having a quality score DQ20) being removed prior to 
+further analysis.
+2.3. Data processing and SNP calling
+The genomic DNA of the sampled populations was extracted using an 
+improved Cetyltrimethylammonium Bromide (CTAB) method. Filtered 
+reads were aligned to the P. simonii reference genome using SOAPaligner 
+(SOAP2, v2.20) with default parameters. Only uniquely mapped reads 
+were retained for single nucleotide polymorphism (SNP) calling to 
+ensure the identification of high-confidence variants. SNP identification 
+was then performed using Genome Analysis Toolkit 4.0 (GATK4). For 
+downstream analysis, SNPs within the association population were 
+filtered using VCFtools, excluding insertions and deletions (InDels). 
+SNPs with more than 20% missing data and those with minor allele 
+frequencies (MAFs) less than 0.05 were discarded. Finally, we obtained a 
+total of 4,996,309 SNPs distributed across the 19 chromosomes.
+2.4. GWAS analysis
+GWAS is a technical method used to establish associations between 
+phenotypes and genotypes. This technique primarily focuses on 
+analyzing static cross-sectional data and identifies significant SNPs that 
+regulate or influence phenotypes at a specific time. Considering the di-
+versity of natural populations, classical GWAS models can be classified 
+into four categories: (1) Generalized Linear Model (GLM), which does 
+not consider group structure or kinship; (2) Kinship Model (KM), which K. Lu et al.                                                                                                                                                                                                                                       
+================================================================================
+PAGE 3
+================================================================================
+
+Plant Physiology and Biochemistry 221 (2025) 109616
+3incorporates kinship information; (3) Group Structure Model, which 
+takes into account group structure; and (4) Group Structure and Kinship 
+Model (QKM), which considers both population structure and kinship 
+factors. These models can be described using equation (9): 
+|
+⨆⨆〈
+⨆⨆⎜yiGiβe⋯a
+yiGiβXiηe⋯b
+yiGiβbie⋯c
+yiGiβXiηbie⋯d(9) 
+where Gi represents the genotype at marker i; β is the fixed genotype 
+effect at marker i; Xi is the 1×p row vector of the population structure at 
+marker i representing the population structure; η is the fixed population 
+structure effect at marker i (which is a p×1 column vector); bi denotes 
+kinship random effect at marker i.
+We adopted a mixed linear model (MLM) that considers kinship and 
+population structure (equation (9)(d)), and implemented it in Efficient 
+Mixed Association eXpedited (EMMAX, version-beta). This model 
+accounted for both population structure (Q matrix) and pairwise kinship 
+(K matrix), which were calculated within the EMMAX framework. Sta-
+tistical significance was determined by calculating p-values for each 
+SNP-trait association, using a significance threshold of p ≼1E-05, where 
+p 1/n and n represents the number of independent markers.
+2.5. Differential dynamic system framework
+We propose a differential dynamic system (DDS) that incorporates 
+the independent growth features of ETR and qN using the LV equation. 
+Denoting X as ETR and Y as qN at the light intensity of l, our DDS model 
+is expressed as 
+|
+⨆⨆⨆〈
+⨆⨆⨆⎜dX
+dlaXX[
+1 X
+KX]
+rY→XXYθY→X⌊
+ln[KY
+Y]⌋bY1
+bY
+dY
+dlaYbYY⌊
+ln[KY
+Y]⌋bY1
+bYrX→YXθX→YY[
+1 X
+KX](1) 
+where relative growth rates of each trait are the summation of two parts: 
+|
+⨆⨆⨆〈
+⨆⨆⨆⎜dX
+dlaXX[
+1 X
+KX]
+dY
+dlaYbYY⌊
+ln[KY
+Y]⌋bY1
+bY(2) 
+representing the independent growth of ETR and qN; 
+|
+⨆⨆⨆〈
+⨆⨆⨆⎜dX
+dlrY→XXYθY→X⌊
+ln[KY
+Y]⌋bY1
+bY
+dY
+dlrX→YXθX→YY[
+1 X
+KX](3) 
+representing the dependent growths of ETR and qN that arise from the 
+interaction of the target trait with its co-existing trait through an 
+inherent mechanism. In the DDS model, aX and aY denote the inde-
+pendent growth rates of ETR and qN respectively, KX and KY are the 
+maximum growth values of ETR and qN respectively, and bY represents 
+the rate at which qN grows to the maximum value. The dependent 
+growth is determined by the phenotype of the interacting trait that co-
+exists with the target trait. The degree of this dependence is described by 
+interaction parameters rY→X and rX→Y, and interaction scale parameters θY→X and θX→Y.
+Complex quantitative traits exhibit intricate interactions and form 
+dynamic systems that regulate physiological processes in the natural 
+world. The DDS framework provides a method to elucidate the patterns 
+of biomass growth and the interactions among its components. We 
+employ model (2) to investigate the genetic mechanism underlying ETR 
+and qN in the natural population of Populus simonii . Let the number of 
+samples be n, all samples are genotyped for genome-wide single nucle -
+otide polymorphism, and phenotypic typing is carried out based on a 
+series of light intensities. y1i 
+y1i1C…Cy1iLand y2i 
+y2i1C…C
+y2iLrepresent the phenotypic values of ETR and qN at light intensities 
+1, …, L, respectively. The mixed likelihood model of phenotypic traits at 
+a given QTL can be shown as, 
+Ly1Cy2̃J
+j1̃nj
+i1fjy1iCy2i (4) 
+where fj 
+y1iCy2i)
+j1C…CJrepresents the bivariate normal distribution 
+of the ith i1C…C102sample at genotype j j1C…CJwith 
+genotype-dependent mean vector μjj1C…CJand covariance matrix Σ 
+as follows. 
+μj(
+μj1Cμj2)
+⊇(
+μj11C⋯Cμj1LCμj21C⋯Cμj2L)
+(5) 
+for mean values of genotype j over two traits and L light intensities, and 
+the covariance matrix Σ is generated by the first-order forward depen -
+dent SAD model (Dong et al., 2023 ) (SAD (1)), and the expression as 
+following: 
+Σ⌊
+Σ11Σ12
+Σ21Σ22⌋
+(6) 
+where 
+Σij⎫
+⎭Cove11Ce21⋯Cove11Ce2L
+⋮ ⋱ ⋮
+Cove1LCe21⋯Cove1LCe2L⎩
+⎨ (7) 
+and 
+Cov 
+eilmCejln)
+γiγjρlmlnϕlm ln
+k2 ϕlm
+k1ϕln
+k2
+1 ϕiϕj(8) 
+denoting the innovation variance and the first-order pre-dependent 
+parameter as γ2
+i, γ2
+j and ϕi, ϕj iCj1C2, respectively, ρlilj as the fixed 
+innovation variance between light intensities lm and ln mCn1C2.
+We establish the initial parameters based on the biological signifi -
+cance of each parameter and the mean curve of the sample data. Sub-
+sequently, we utilize the fourth-order Runge-Kutta algorithm to solve 
+the DDS model. During the numeric experiment, the BFGS algorithm is 
+introduced to guarantee the precision and reliability of DDS model 
+under the maximum error 10 5.
+2.6. Identification of significant QTLs
+The presence of significant pleiotropic QTLs associated with the 
+interaction between ETR and qN can be detected using log-likelihood 
+ratio (LR) statistics. The null hypothesis and alternative hypothesis for 
+the DDS model can be expressed as follows:   
+H0B 
+aXjCaYjCbYjCKXjCKYjCrYj→XjCrXj→YjCθYj→XjCθXj→Yj)
+aXCaYCbYCKXCKYCrY→XCrX→YCθY→XCθX→Yforj1C…CJ (10) K. Lu et al.                                                                                                                                                                                                                                       
+================================================================================
+PAGE 4
+================================================================================
+
+Plant Physiology and Biochemistry 221 (2025) 109616
+4H1BAtleastoneoftheequalities doesnothold 
+The LR statistics can be expressed as 
+LR2log[L1
+L0]
+(11) 
+where the likelihood values L0 and L1 are calculated based on H0 and H1 
+respectively, and LR statistics are compared with the critical threshold 
+determined from the Bonferroni correction. Note that the null hypoth -
+esis states that these DDS parameters are genotype invariant.
+We can also test whether a significant QTL affects the independent 
+part by formulating the following equation: 
+H0B 
+aXjCaYjCbYjCKXjCKYj)
+aXCaYCbYCKXCKYforj1C…CJ (12) 
+H1B 
+aXjCaYjCbYjCKXjCKYj)
+ℑaXCaYCbYCKXCKYforj1C…CJ 
+or the interaction part by the following equation: 
+H0B 
+rY→XjCrX→YjCθY→XjCθX→Yj)
+rY→XCrX→YCθY→XCθX→Yforj1C…CJ
+(13) 
+H1B 
+rY→XjCrX→YjCθY→XjCθX→Yj)
+ℑrY→XCrX→YCθY→XCθX→Yforj1C…CJ 
+The LR statistics for the above two pairs of hypotheses are compared 
+with the corresponding critical thresholds to identify important QTLs 
+that influence the dependent growth and interact growth, respectively. 
+The QTL that is significant in hypothesis test (10) is referred to as the 
+"pivotal pleiotropic QTL" due to its significant contribution to the gen-
+eral growth between ETR and qN.
+2.7. Construction about the network of QTLs
+In the photosynthesis system, each SNP controls the traits not only 
+through its own genetic effects, but also activates or inhibits by other 
+SNPs (Gu et al., 2016 ). We tried to construct the dynamic genetic reg-
+ulatory network of ETR and qN under different light intensities based on 
+quasi-dynamic ordinary differential equations (qdODEs) (Gu et al., 
+2016 ; Anderson et al., 2021 ; White, 1924 ; Volterra, 1928 ; Krumbeck 
+et al., 2021 ; Paczkowski et al., 2021 ; Stone, 2016 ; Jolma et al., 2013 ; 
+Wang et al., 2021 ; Wu and Jiang, 2021 ). Each node in a network has 
+limited links, reconstructing a sparse network based on qdODEs is 
+equivalent to identifying and choosing a small number of variables that 
+affect a focal variable. Multiple regression model can specific the focal 
+variable (response) as a combination of all other variables (predictors) 
+across samples. The Legendre Orthogonal Polynomial (LOP)-based 
+approach can be used to smooth the data, and the LASSO method is used 
+for variable selection before the qdODEs formed.
+Let gx
+s 
+gx
+sl1C…Cgx
+slL)
+and gy
+s 
+gy
+sl1C…Cgy
+slL)
+be overall ge-
+netic effects of ETR and qN respectively, and the genetic effects could be 
+decomposed into independent component and dependent component 
+(equation (14)). 
+gBk
+slQk
+s 
+gk
+slCΘx
+s)
+̂S
+sʹ1CsʹℑsQk
+ssʹ 
+gk
+ssʹlCΘx
+ssʹ)
+(14) 
+where gBk
+slis the derivative of net genetic effect of QTLs on trait k at 
+light intensity l, Qk
+sBis the characteristic function of the independent 
+genetic effect when QTLs are assumed to be independent. Qk
+ssʹBis the 
+characteristic function regulating genetic effects when QTLs are 
+assumed to be dependent, gk
+sland gk
+ssʹlare the genetic effects pertinent 
+to independent and interactive effects. Θx
+s and Θx
+ssʹ are the sets of pa-
+rameters applicable to independent and interactive functions. LOP can 
+used to fit equation (14)and construct the regulatory networks, and the 
+solution of the equation depends on the ‘optim ’ function in R. Visuali -
+zations of networks are implemented through ‘Cytoscape ’ software.2.8. Computer simulation
+The simulation experiment consists of two parts. In the first part, we 
+assumed the presence of two photosynthetic traits, namely, trait 1 and 
+trait 2, which interacted developmentally through cooperation and/or 
+competition. The parameters  
+aXjCaYjCbYjCKXjCKYjCrY→XjCrX→YjCθY→XjC
+θX→Yj)
+and the SAD(1) parameters for covariance structure of chosen 
+significant QTL (i.e. pivotal pleiotropic QTL) were used as original 
+values for phenotypic data simulation. We simulated a family of size n 
+30, 50, 100, respectively. Heritability was the proportion of genetic 
+variance in the simulated phenotypic variance, and two levels of H2 
+were utilized: H2 0.05 and 0.1. The size of heritability was used to 
+adjust the magnitude of innovative variance. We then conducted two 
+separate simulations with 1000 markers each: one simulation included a 
+significant QTL, while the other did not. For the former, we recorded 
+whether the DDS framework could successfully identify the significant 
+QTL from the 1000 genetic markers. This simulation was repeated 100 
+times, and the proportion of simulations in which the significant QTL 
+was successfully identified out of the 100 trials was defined as the QTL 
+mapping accuracy. For the latter, the proportion of simulations in which 
+a QTL was incorrectly identified out of the 100 trials was defined as the 
+false positive probability. In the second part, we selected a significant 
+pleiotropic QTL, simulated the genotype-specific growth curve of this 
+QTL under heritability (n 0.05, 0.1, 0.2), and compared its consistency 
+with the real growth curve.
+3.Results
+3.1. Technology roadmap
+Phenotype and genotype data were collected following an experi -
+mental routine (Fig. 1a). The influence of the population structure 
+vector and kinship matrix on ETR and qN was assessed using the bio-
+logical software Admixture and EMmax, respectively (Fig. 1b). Addi-
+tionally, the DDS model was utilized to capture the overall, independent, 
+and interactive growth trends of ETR and qN (Fig. 1c). LR statistics were 
+used to distinguish significant pleiotropic QTLs, with a threshold 
+determined by the Bonferroni method (Fig. 1d). We visualize the QTL- 
+QTL network of pivotal pleiotropic QTLs and implement functional 
+annotations to interpret the gene mechanism (Fig. 1e). Pivotal pleio-
+tropic QTLs can be classified into different modes based on their dy-
+namic gene effects (Fig. 1f). Computer simulations are designed to 
+demonstrate the reliability and robustness of the DDS model (Fig. 1g).
+3.2. Variability of selected traits
+ETR and qN serve as indicators of the photosynthetic efficiency and 
+stress resistance of plants during the photosynthetic process (Zhang 
+et al., 2020 ). The coefficient of variation (CV) decreased sharply from 
+56.9% (l12B00) to 19.3% (l23B85), and gradually declined further 
+to 16.0% for ETR (Fig. 2a and b). The value started to gradually increase 
+once the light intensity exceeded l6 (5.85), and eventually reached a 
+steady rise to 25.0% (l117B89). It is worth noting that the CV of ETR 
+did not exhibit a consistent decreasing trend. Instead, there was a small 
+amplitude oscillation observed, ranging from 15.1% (l34.41) to 
+17.3% (l76.21). This observation suggests that trees possess the 
+ability to self-regulate during the photosynthetic process. Additionally, 
+significant outliers in phenotype values were noticed under the initial 
+light intensity (Fig. 2c), indicating a potential association with the rapid 
+transition of plants from a dark environment to a light environment. As 
+the light intensity gradually increased, the number of outliers decreased 
+progressively. The outliers eventually disappeared after reaching l9 
+(7.04), suggesting that the impact of light intensity on ETR weakened 
+with stronger light intensities. The CV of qN was considerably higher 
+during the initial stage (Fig. 2b), exceeding that of ETR by more than K. Lu et al.                                                                                                                                                                                                                                       
+================================================================================
+PAGE 5
+================================================================================
+
+Plant Physiology and Biochemistry 221 (2025) 109616
+5two-fold. This indicates that qN is likely to be more sensitive than ETR. It 
+exhibited a sharp decrease from 119.0% (l1) to 61.1% (l2), followed by a 
+steady decline to 7.1% (l11). Fig. 2d reveals a large number of outliers 
+under the initial light intensity, which is consistent with the pattern 
+observed for ETR. This phenomenon suggests that plants may exhibit a 
+vigorous response during photosynthesis when transitioning from dark 
+to light environments in two different growth conditions. The distribu -
+tion of phenotype values for qN gradually became more concentrated as 
+the light intensity increased. Interestingly, the trend of qN distribution 
+was opposite to that of ETR, indicating that qN is more sensitive to 
+changes in light intensity compared to ETR.3.3. Population structure and kinship
+A total of 4,996,309 high-quality SNPs were utilized to define sub-
+populations using the EM algorithm through Admixture. The optimal 
+number of subpopulations, as predicted by cross-validation (Fig. 3a), 
+was determined to be K 6. These six subgroups consisted of 5 (4.9%), 
+12 (11.8%), 40 (39.2%), 12 (11.8%), 11 (10.8%), and 22 (21.6%) in-
+dividuals, respectively (Fig. 3b). The majority of individuals were found 
+to have a common population origin, indicating that the influence of 
+population structure in subsequent analyses may be insignificant. We 
+found that this population included three major groups, which were 
+Fig. 1.Technology roadmap of DDS framework. a Material and data source. b Population structure and kinship results. c DDS model fitting with both independent 
+and interact features. d Identification of QTLs and phenotypic variations explained (PVE) analysis. e Network of pivotal pleiotropic QTLs and their functional an-
+notations. f Genetic effects analysis and classification of QTLs. g Computer simulations.K. Lu et al.                                                                                                                                                                                                                                       
+================================================================================
+PAGE 6
+================================================================================
+
+Plant Physiology and Biochemistry 221 (2025) 109616
+6different along the first principal component (PC) in PC analysis, and the 
+largest group included 65.7% of the individuals (Fig. 3c). This finding 
+provides additional confirmation that the influence of population 
+structure can be disregarded. The kinship matrix was subsequently uti-
+lized for population correction in association models using EmMax 
+software (Fig. 3d). The median value of genetic relationship of 102 
+samples was 0.071, 86.9% of the kinship values were less than 0.2, 
+46.3% of the samples were unrelated (Fig. 3d), which displayed that the 
+influence of genetic relationship should be faint. Furthermore, the ef-
+fects of population structure and kinship on the samples under different 
+light intensities were analyzed using three GWAS models: GLM, KM, and 
+QKM (equation (9)). Taking ETR and qN under the second group of light 
+intensity as an example, the quantile-quantile plot of ETR (Fig. S2a) 
+revealed that all three models underestimated  log10P, although 
+some SNPs from the GLM model still fell within the confidence interval 
+(gray area). In the quantile-quantile plot of qN (Fig. S2b), the screening 
+result of the GLM model was superior, while the other two models failed 
+to identify significant loci. In conclusion, for the 102 Populus simonii 
+samples, the influence of population structure and genetic relationship 
+on ETR and qN could be neglected, leading to reduced model complexity 
+and diminished errors.
+3.4. DDS fitting
+Biological growth adheres to fundamental principles of biophysics 
+and biochemistry. Various equations, such as the Gompertz, Logistic, 
+Korf, and others, have been proven to effectively describe the patterns of 
+complex quantitative traits, including photosynthesis traits (West et al., 
+2001 ; Gu et al., 2016 ; Anderson et al., 2021 ). ETR and qN, which serve 
+as key indicators of the intrinsic characteristics of photosynthesis, 
+interact with each other to optimize the utilization of light (Zhao et al., 
+2017 ). The optimization strategy of ETR and qN can be interpreted by 
+considering phenotypes as dynamic systems. Given their potential in-
+teractions, we introduce Lotka-Volterra (LV) differential equations to jointly model the relationship between ETR and qN. LV differential 
+equations, originally developed by White in 1924 and Volterra in 1928, 
+were initially used to describe the ecological interaction between two 
+species, with one acting as a predator and the other as prey. However, 
+these equations have been extended to model interactions in nonliving 
+systems as well (Krumbeck et al., 2021 ; Paczkowski et al., 2021 ; Stone, 
+2016 ). The forms of Logistic, Korf, and LV equations can be found in the 
+Supplementary Materials . The numeric experiments (Supplementary 
+Table 1) indicates that the logistic model can accurately describe the 
+trend of ETR, while the Korf model effectively captures the trend of qN. 
+DDS allows us to explore the genetic mechanism underlying their 
+interaction in PSII and exhibits better fitting performance on the two 
+phenotypes compared to the Korf and logistic models (Table 1). The 
+fitting performance is evaluated using Coefficient of Determination (R2), 
+Akaike Information Criterion (AIC), and Hannan-Quinn criterion (HQ), 
+with better performance indicated by an R2 closer to 1, a smaller AIC, 
+and a smaller HQ. Moreover, the DDS model can accurately describe the 
+inherent developmental trend and degree of interaction between the 
+phenotypes through various parameters.
+3.5. QTL mapping by dynamic differential system
+From our numerical experiments (Supplementary Table S1), we 
+discovered that the growth of ETR followed a logistic trend, while the 
+growth of qN exhibited a Korf trend as the light intensity increased. The 
+growth trend of each sample was accurately captured by the DDS model. 
+The fitting curves (refer to Fig. 4a and b) demonstrated that the DDS 
+model effectively captured the mean values of both ETR and qN. In the 
+experimental environment, an allometric growth relationship was 
+observed between ETR and qN during the process of photosynthesis. The 
+promoting effect of qN on ETR gradually increased and eventually sta-
+bilized at approximately 0.29, contributing to 26.7% of the total growth 
+(Fig. 4a). This finding highlights the significant role of qN in enhancing 
+ETR and influencing the overall growth dynamics of photosynthesis. 
+Fig. 2.Variability analysis of ETR and qN. a CV values of ETR and qN under different light intensities. b Coefficient of variation trend of ETR (red square) and qN 
+(green circle). c Boxplot for phenotype value of ETR under 11 groups of light intensities. d Boxplot for phenotype value of qN under 11 groups of light intensities. (For 
+interpretation of the references to color in this figure legend, the reader is referred to the Web version of this article.)K. Lu et al.                                                                                                                                                                                                                                       
+================================================================================
+PAGE 7
+================================================================================
+
+Plant Physiology and Biochemistry 221 (2025) 109616
+7However, the positive effect of ETR on qN increased initially and 
+reached its maximum when the logarithm of light intensity was 6. 
+Subsequently, the effect gradually decreased but still played a positive 
+role (Fig. 4b). These results highlight a unique allometric "symbiotic" 
+relationship throughout the entire process of photosynthesis. The inde-
+pendent growth had a dominant influence on ETR (Fig. 4c), while qN 
+was significantly affected by ETR (Fig. 4d). This illustrates the interac -
+tion between ETR and qN in promoting the smooth progression of 
+photosynthesis. However, the positive role in enhancing the light pro-
+tection ability would be weakened if the value of ETR became too large, 
+possibly due to the plants ’ photoprotection capacity.
+The joint process of independent and interactive growth is further 
+analyzed by considering potential genetic components, represented as 
+QTLs, using genome-wide SNP information. A QTL is considered sig-
+nificant according to the hypothesis test (10) and is referred to as a "pivotal pleiotropic QTL" as it governs the interactions between ETR and 
+qN. We characterized the influence of a pivotal pleiotropic QTL by 
+estimating and testing parameters  
+aXjCaYjCbYjCKXjCKYjCrY→XjCrX→YjC
+θY→XjCθX→Yj)
+across different genotypes to understand how pivotal 
+pleiotropic QTLs influence the relative contributions of competition and 
+cooperation between ETR and qN. Furthermore, we determined the 
+critical thresholds for QTL detection by examining Manhattan plots of 
+test statistic values, taking into account the segregation information 
+available. These thresholds allowed us to identify significant QTLs with 
+statistical confidence. Fig. 5presents the results of this analysis, high-
+lighting the genomic regions associated with these significant QTLs. For 
+example, our DDS model identified 78 QTLs with threshold sig1 10 14
+4948544 
+and 250 QTLs with threshold sig2 10 12
+4948544 sporadically distributed over 
+the genome, although some chromosomes harbor more than others. 
+Supplementary Table S2provides essential information about 68 QTLs 
+Fig. 3.Population structure and kinship analysis of 102 Populus simoniis . a The population structure of 102 samples. Each color represents a group. Each 
+column represents a sample, and each colored part in each column represents the proportion of the contribution of the ancestral population. The legend entries on the 
+right show the type of groups in (A), (B), and (C). b The proportion of each subspecies group in total samples. c The principal component analysis of 102 samples, the 
+horizontal axis represents the first principal component and the vertical axis denotes the second principal component. Individuals from the same group are painted by 
+the same color. Three sets divided by the first principal component are marked in the plot. d Heatmap of kinship matrix. (For interpretation of the references to color 
+in this figure legend, the reader is referred to the Web version of this article.)
+Table 1 
+Fitting parameters and fitting effects of three models.
+ETR qN
+Logistic Korf LV Logistic Korf LV
+K 1.2265 
+a 942.0694 
+b 1.1435K 2.2173 
+a 78.9214 
+b 2.3041KX0B9989 aX0B8898 
+rY→X2B0571 
+θY→X 0B7718 
+KY0B9160 bY9B3416K 0.7813 
+a 164.8639 
+b 1.0531K 1.0434 a 42.9168 
+b 2.4081KY0B9160 aY0B0404 
+bY9B3416 
+rX→Y0B2079 
+θX→Y2B2285 
+KX0B9989
+R20B9989 R20B9938 R20B9993 R20B9938 R20B9947 R20B9970
+AIC  91.0695 AIC  71.7703 AIC  91.2311 AIC  81.6481 AIC  83.2432 AIC  83.7072
+HQ  94.4457 HQ  75.1466 HQ  97.9836 HQ  85.0243 HQ  86.6194 HQ  90.4596K. Lu et al.                                                                                                                                                                                                                                       
+================================================================================
+PAGE 8
+================================================================================
+
+Plant Physiology and Biochemistry 221 (2025) 109616
+8identified with sig1, all of which are located within candidate genes. The 
+majority of significant QTLs are found on chromosomes 3, 5, 7, 8, and 
+14. Notably, some QTLs, such as QTL3595368 and QTL3615022, are 
+located within the same gene (as depicted in Fig. 5a). This gene encodes 
+a protein that shares similarities with animal presenilin and is known to 
+be influenced by potassium (K) deficiency. These findings suggest that 
+the regulation mechanism of this gene on ETR and qN may be linked to 
+the concentration of potassium in the surrounding environment. We also 
+conducted a series of GWAS analyses on the two traits under 11 different 
+light intensities, separately. We screened the 300 most significant loci 
+for each phenotype under each light intensity and compared the overlap 
+of QTLs between the DDS framework and the GWAS method. The GWAS 
+method calculates the significance of loci by establishing a static asso-
+ciation between a set of phenotypes and genotypes. Therefore, per-
+forming GWAS analysis on two sets of phenotypes under 11 sets of light 
+intensities results in 22 sets of screening results. Fig. 5b displays part of 
+the GWAS results, showing the boxplot of the two traits and the Man-
+hattan plot under the 9th light intensity. The overall emergence of QTLs 
+with the GWAS method is depicted in Fig. 5c. We identified 45 common 
+QTLs between the DDS framework and the GWAS method, confirming 
+the effectiveness of the DDS framework to some extent. These 45 QTLs 
+may play important roles in both static conditions with a specific light 
+intensity and dynamic processes. The presence of different QTLs iden-
+tified by the DDS framework and the GWAS method highlights the 
+complexity of the regulatory mechanisms in a dynamic environment.3.6. Genetic control of ETR-qN interactions
+Based on the significant effects of identified QTLs under threshold 
+sig2, we estimated the parameters of DDS model with different geno-
+types for ETR and qN, and calculated the phenotypic variation explained 
+(PVE) under 11 light intensities by quantifying the dynamic genetic 
+contribution to ETR and qN variation. In general, the effect of light in-
+tensity on PVEs of ETR differed from qN, with the PVEs of ETR gradually 
+increasing with the increase of light intensities at initial, when the light 
+intensity continued to increase before the fourth group (’yl4’), the PVEs 
+then increased slightly but became more dispersed (Fig. 6a and b). Ac-
+cording to the identified QTLs, when the environment shifted from dark 
+to light, the control to qN was more susceptible to changes in light in-
+tensity. The PVEs then stabilized around 20 when the light intensity 
+gradually increased (Fig. 6c and d). Hierarchical clustering was per-
+formed based on the PVE values of identified QTLs under 11 different 
+light intensities, and the dynamic changes of these QTLs with light in-
+tensity were divided into several distinct stages, represented by different 
+colors (Fig. 6e and f). The variation progress of ETR was divided into two 
+groups: low light intensities and high light intensities (Fig. 6e). On the 
+other hand, the variation progress of qN was divided into three groups: 
+the first group consisted of light intensities, followed by medium and 
+high light intensities (Fig. 6f). This division further revealed that the 
+sensitivity to light intensities differed between ETR and qN: qN was 
+more susceptible when exposed to light, while ETR was more likely to be 
+Fig. 4.Dynamic fitness of complex traits and the identification of QTLs through DDS model. a Growth trajectories of ETR, indicated by solid red lines, are well 
+fitted by DDS model. Each fitting curve is the summation of independent growth curve (purple broke line) and interactive growth curve (blue broke line). The green 
+triangle represents the mean value of the real data and the distribution of genotypic variation is shown in shade. b Independent and interactive proportion of ETR. 
+The green area represents the proportion of independent part, and the pink area represents the proportion of interactive part. c Growth trajectories of qN. d Inde-
+pendent and interactive proportion of qN. (For interpretation of the references to color in this figure legend, the reader is referred to the Web version of this article.)K. Lu et al.                                                                                                                                                                                                                                       
+================================================================================
+PAGE 9
+================================================================================
+
+Plant Physiology and Biochemistry 221 (2025) 109616
+9influenced only after continuous illumination.
+We interpreted the genetic features of one representative locus, QTL 
+chr3/3242856, which exhibited three genotypes: GG, GT, and TT. This 
+QTL is located on the candidate gene Potri.003G026800, which is 
+associated with hydrolase activity, omega peptidase activity, and 
+Peptidase C26 (Supplementary Table S2). These enzymes potentially 
+play a role in regulating tree metabolism and controlling photosynthesis. 
+The interaction between ETR and qN contributes to the advancement of 
+photosynthesis, implying that the QTL may exert control over ETR and 
+qN by regulating these enzymes. Fig. 6a clearly demonstrates that in-
+dividuals with different genotypes for each trait exhibit a similar general 
+growth pattern, albeit with varying upper limits. Relative to ETR, the QTL has a much more pronounced effect on qN growth, as shown by a 
+noted difference in the shape of the qN growth curve among three ge-
+notypes (Fig. 7b). The analysis revealed that QTL chr3/3242856 had 
+genetic effects on both independent and dependent growth, but the 
+impacts differed (Fig. 7). Independent growth was the primary factor 
+influencing the growth of ETR, except in samples with genotype TT 
+where the interactive component briefly exceeded the independent 
+component (Fig. 7a). In contrast, the situation was distinct for qN, 
+indicating that the interactive component had a more significant impact 
+on qN compared to ETR at this specific QTL (Fig. 7b).
+Fig. 5.a Manhattan map of the whole genome, the brown dotted line is the tighten threshold sig1 corrected by Bonferroni, the magenta line is the threshold sig2 
+corrected by Bonferroni, six most significant peaks are presented in dark colors. The significant QTLs with threshold sig1 in the candidate gene intervals are rep-
+resented by red dots with the positions in the overall sequence. The collection of significant QTLs with threshold sig2 are represented by the orange circle on the right. 
+b The boxplot of two traits under 11 light intensities. Taking the results under the 9th set of light intensities as an example, the QTLs associated with ETR and qN 
+under this set of light intensities can be selected through the Manhattan diagram on the right. c The union set of significant QTLs associated with ETR and qN under 
+the 9th group of light intensity was recorded as the result of the screening of the lower points of the 9th group of light intensity. Similarly, the results of site screening 
+under other different light intensities can be obtained. The site screening results under 11 sets of light intensities are taken as a union set and recorded as significant 
+QTL screening results for the dynamic two-dimensional phenotype based on the GWAS method in this experiment. d The venn diagram of significant QTL for DDS and 
+GWAS method. (For interpretation of the references to color in this figure legend, the reader is referred to the Web version of this article.)K. Lu et al.                                                                                                                                                                                                                                       
+================================================================================
+PAGE 10
+================================================================================
+
+Plant Physiology and Biochemistry 221 (2025) 109616
+103.7. QTL network
+Fig. 8illustrates the interaction mechanism between ETR and qN by 
+showing four genetic networks constructed with pivotal pleiotropic 
+QTLs under two thresholds. We define the QTLs that govern others as 
+controllers. The set of controllers is denoted as CEN1 (controllers of the 
+ETR network under the threshold sig1), CEN2 (controllers of the ETR 
+network under the threshold sig2), CqN1 (controllers of the qN network 
+under the threshold sig1), and CqN2 (controllers of the qN2 network 
+under the threshold sig2), respectively. Both sets of CEN1 and CEN2 
+exceed 40% (Fig. 7e), showing that these controllers may influence ETR 
+variation not only through links with other QTLs but also through their own gene function. For example, NO.10 (QTL369581) is located on 
+candidate gene Potri.001G255000 which governs protein binding, tet-
+ratricopeptide repeat, and DnaJ domain. Other controllers of ETR 
+network are not located on candidate genes, but most are close to 
+candidate genes, which may work as promoters or terminators to pro-
+duce effects (Jolma et al., 2013 ) or may directly participate in gene 
+transcription as cis regulatory elements. It is worth noticing that there 
+are multiple circular pathways in Fig. 8a, such as NO.12 (QTL444156) → 
+NO.109 (QTL2443671) → NO.50 (QTL1171541) → NO.12 
+(QTL444156), showing a dynamic balance system in the genetic regu-
+lation of photosynthesis. In addition, pivotal pleiotropic QTLs can be 
+controlled through the transmission of secondary QTLs, such as 
+Fig. 6.Heat maps of phenotypic variation explained (PVE) explained by 78 significant QTLs detected under threshold sig2. a The violin diagram of PVEs for 
+Electron Transport Rate. b The density diagram of PVEs for Electron Transport. c The violin diagram of PVEs for Non-Photochemical Quenching coefficient. d The 
+density diagram of PVEs for Non-photochemical quenching. e The patterns of heritability for Electron Transport Rate with two phases. f The patterns of heritability 
+for non-photochemical quenching with three phases.K. Lu et al.                                                                                                                                                                                                                                       
+================================================================================
+PAGE 11
+================================================================================
+
+Plant Physiology and Biochemistry 221 (2025) 109616
+11
+Fig. 7.The Genetic features on QTL chr3/3242856. a Genotypic curves of ETR and qN in Populus simonii , explained by QTL chr3/3242856. b Comparison of three 
+components (general growth, independent growth, interactive growth) in different genotypes. The general growth of each trait (solid line) was contributed by in-
+dependent growth (dashed line) and interactive growth (dotted line). The three genotypes are GG, GT, and TT.K. Lu et al.                                                                                                                                                                                                                                       
+================================================================================
+PAGE 12
+================================================================================
+
+Plant Physiology and Biochemistry 221 (2025) 109616
+12
+Fig. 8.QTL networks through genetic effects and genetic analysis. a QTL network of ETR under threshold sig1. b QTL network of ETR under threshold sig2. c 
+QTL network of qN under threshold sig1. d QTL network of qN under threshold sig2. The red circles represent the controllers, the other colors are used to describe 
+non-controllers, the legends are shown on the top right-hand corner. e Venn diagram of controllers, QTL on candidate gene is marked red. f Distribution map of 
+candidate genes and controllers. g Sankey diagram of controllers in four different QTL networks. h The distribution of the outgoing links (blue) and incoming links 
+(yellow) for ETR (upper) and qN (lower) under threshold sig1. i, The distribution of the outgoing links (blue) and incoming links (yellow) for ETR (upper) and qN 
+(lower) under threshold sig2. (For interpretation of the references to color in this figure legend, the reader is referred to the Web version of this article.)K. Lu et al.                                                                                                                                                                                                                                       
+================================================================================
+PAGE 13
+================================================================================
+
+Plant Physiology and Biochemistry 221 (2025) 109616
+13regulatory pathway NO.50 → NO.250 (QTL4956439) →  NO.109. The 
+network reflects the complexity and integrity of the genetic regulation 
+during photosynthesis. Some QTLs are located within candidate gene 
+intervals, which can be used to explain their specific regulation mech -
+anisms of ETR. For example, NO.68 (QTL1607860) is associated with 
+the candidate gene Potri.005G053100, which encodes a hydrolase that 
+acts on the ester bond. This hydrolase might catalyze certain reactions in 
+PSII or regulate the growth of ETR by modifying the pH value and 
+temperature of PSII. NO.94 (QTL2283536) is involved in controlling 
+iron binding and the activity of an oxidoreductase, which acts on paired 
+donors, combining or reducing with molecular oxygen. This activity 
+could potentially affect the hydrolysis process by influencing the activity 
+of the redox reaction, subsequently impacting the trend of ETR. Simi-
+larly, NO.73 (QTL1956825), NO.96 (QTL2308856), NO.133 
+(QTL3043713), and NO.212 (QTL4157232) regulate changes in ETR by 
+controlling proteins. With a tightened threshold sig2 (Fig. 7b), NO.50 
+and NO.109 govern 59.9% of the paths in the network. Furthermore, we 
+observed that NO.14 (QTL439887) plays a crucial role in the tightened 
+network instead of NO.12. The physical positions of NO.14 and NO.12 
+are very close, suggesting that they may be located within the same 
+regulatory region. QTLs located in non-coding regions can indirectly 
+influence the expression of final proteins by regulating QTLs in coding 
+regions. In some extent, NO.14 holds more significance than NO.12 and 
+NO.62 (QTL1525231), which indirectly control other QTLs through 
+NO.12 and NO.62. This indicates that non-controllers can have signifi -
+cant genetic effects on the changes of ETR and qN by interacting with 
+other QTLs. This genetic mechanism aligns with genetic analyses con-
+ducted on forest root systems in 2021, as reported in Cell Reports (Wang 
+et al., 2021 ).
+From Fig. 8c, NO.1 (QTL133309), NO.220 (QTL4266141) and 
+NO.244 (QTL4867125) govern most QTLs in the network of qN, among 
+which NO.1 and NO.244 are bidirectional and mutually controlled, and 
+some QTLs are regulated by multiple QTLs, such as NO.220 →  NO.135 
+(QTL3057387) → NO.225 ← NO.244. When the threshold is tightened, 
+the controllers might change, as shown in Fig. 8d. Since some original 
+QTLs are not included under threshold sig2, NO.237 (QTL4760793) has 
+become as controller, which is regulated by NO.175 (QTL3812183) and 
+NO.244 in the original network (Fig. 8c). This phenomenon indicates 
+that the controllers in the network primarily impact qN through links 
+with other QTLs. However, NO.199 (QTL3844928) remains significant 
+under both thresholds (Fig. 8e), demonstrating similar importance to the 
+controllers in the ETR network. Additionally, more than 50% of the 
+controllers in the qN regulatory network are located within coding re-
+gions. For example, NO.1 (QTL133309) is located on the intron region of 
+chromosome 1, the corresponding gene encodes transmembrane protein 
+14C in Populus Tomentosa, and its homologous genes in Arabidopsis 
+thaliana control the fatty acid transport of mediators. The QTL might 
+control the value of qN by affecting transmembrane transport. NO.135 
+(QTL3057387) contributes to the progress of DNA binding, and the 
+homologous gene in Arabidopsis Thaliana, AT3G24650, known as ABI3, 
+is involved in controlling accumulation of chlorophyll. NO.220 
+(QTL4266141) is also located at the coding region and encodes glyco -
+syltransferase. NO.131 (QTL3043608) is located on the intron region of 
+chromosome 11. The homologous gene in Arabidopsis thaliana controls 
+atypical kinase to play an important role on plant salt tolerance by 
+regulating reactive oxygen species (ROS). This QTL may be relevant to 
+the process of reactive oxygen species regulating PSII. It is noteworthy 
+that NO.94 and NO.133 have significant impact on both regulatory 
+network of ETR and qN, which can be inferred that the two QTLs should 
+occupy pivotal pleiotropic position in the processes of photosynthesis.
+Although the controllers in the network of QTL and qN have no 
+intersection, they adjust or be adjusted each other by complex network 
+relationship (Fig. 8g). For a QTL, a link is said to be outgoing if this QTL 
+activates or inhibits other QTLs, or incoming if it is activated or inhibited 
+by other QTLs. Outgoing and incoming links reflect different roles of a 
+QTL playing in network structure and behavior. We counted the total number of outgoing and incoming links for each QTL in the network 
+under thresholds sig1 and sig2, and visualized the distribution respec -
+tively (Fig. 8f–h, i). The numbers of outgoing links differed greatly 
+across controllers, ranging from 1 to 203 (sig1) and 1 to 62 (sig2) 
+respectively, reflecting different controllers occupied different positions 
+in the regulatory network: most controllers can only regulate one or 
+several QTLs, while dominant QTLs, such as NO.12 and NO.109 in the 
+network of ETR under threshold sig1(Fig. 7h), controlled over 200 links 
+to other QTLs, the situation in Fig. 7i was similar with that in Fig. 7h. All 
+controllers in the ETR network turned to be secondary in the network of 
+qN, that was true with controllers in the qN network. The above results 
+ulteriorly proved the conclusion in Fig. 8g: controllers regulating ETR 
+were not the same as those regulating qN, but they worked together to 
+balance the dynamic interaction between ETR and qN both through 
+mutual regulation but also through direct action of themselves.
+3.8. Genetic effects of pivotal pleiotropic QTLs
+We utilized the genetic effects to examine the characteristics of 
+several pivotal pleiotropic QTLs (Fig. 9). For example, the effects of 
+general growth and independent growth on NO.14 initially increased 
+and then decreased when the log value of light intensity exceeded 3.6 
+(Fig. 9a and b). Interestingly, different pivotal pleiotropic QTLs exhibi -
+ted diverse patterns. All effects on NO.109 remained negative 
+throughout the entire process, while independent growth gradually 
+surpassed general growth at NO.22. The other three QTLs demonstrated 
+both additive and dominant effects, resulting in more complex patterns. 
+For instance, NO.131 and NO.237 displayed general synclastic additive 
+effects (red solid lines) and opposite dominant effects (purple dotted 
+lines). Moreover, the general effects (both additive and dominant) of all 
+six QTLs exhibited inflection points (Fig. 9b), indicating that the effects 
+of QTLs might weaken when the log value of light intensity exceeded a 
+specific value, typically between 3 and 5. For certain QTLs like NO.14 
+and NO.109, the controlling trend reversed after the inflection points, 
+whereas for NO.237, stabilization was observed when the log value of 
+light intensity exceeded 5.5.
+Different from the circumstances in ETR, the independent growths in 
+qN were more dispersed, as observed in NO.14 and NO.22. Notably, 
+among the controllers of qN (Fig. 9c and d), the trend of additive in-
+dependent growth remained consistent: negative. This suggests that 
+these QTLs might govern the decrease of qN to ensure smooth plant 
+photoreaction. On the other hand, additive interactions increased qN to 
+enhance light protection capabilities. Dominant effects further adjusted 
+the effects to help qN achieve a state of equilibrium.
+In nature, various interactions occur among different populations. 
+Similarly, interactions among phenotypes-phenotypes, phenotypes-ge -
+notypes, and genotypes-genotypes are common during the growth pro-
+cess of organic organisms (Jiang et al., 2018 ; Fu et al., 2018 ). As a 
+complex system, photosynthesis maintains dynamic balance through 
+numerous physical and chemical processes, including interactions be-
+tween phenotypes. By utilizing the DDS model, we have successfully 
+quantified the dynamic effects of QTLs (Fig. 8e). Therefore, we propose 
+implementing a dynamic classification by dividing their genetic effects 
+using an innovative vertical coordinate system as shown in Fig. 8e. The 
+vertical coordinate plane is divided into four quadrants: I (blue area), II 
+(pink area), III (green area), and IV (yellow area). Each quadrant rep-
+resents an interaction mode: 
+I. mutualism, ETR and qN benefit from one another;
+II. parasitism-1, qN benefits at the cost of ETR;
+III. competition, ETR and qN are harmful to each other;
+IV. parasitism-2, ETR benefits at the cost of qN.
+Now, let’s explain how to apply our method to classify the QTLs 
+using the six pivotal pleiotropic QTLs shown in Fig. 9a, b, c, d as ex-
+amples. When the curve falls within the yellow area, it indicates that the K. Lu et al.                                                                                                                                                                                                                                       
+================================================================================
+PAGE 14
+================================================================================
+
+Plant Physiology and Biochemistry 221 (2025) 109616
+14
+(caption on next page)K. Lu et al.                                                                                                                                                                                                                                       
+================================================================================
+PAGE 15
+================================================================================
+
+Plant Physiology and Biochemistry 221 (2025) 109616
+15corresponding QTL has a positive effect on ETR but negatively affects 
+qN. QTL22, QTL109, QTL131, and QTL237 exhibit single modes where 
+the majority of the curves are located in one specific area. On the other 
+hand, QTL14 and QTL50 have more complex situations, with curves 
+passing through two or three areas as the light intensity increases. This 
+suggests that the expression of these QTLs is influenced by light in-
+tensity. The additive independent effects consistently fall within one 
+area for all QTLs, while the interactive effects show more diversity. 
+Notably, the two effects consistently occur in opposite directions, indi-
+cating a regulatory mechanism that maintains balance in photosyn -
+thesis. Dominant effects are significantly higher than additive effects in 
+QTLs that exhibit both dominant and additive effects, suggesting that 
+dominant effects may play an important role in groups with three ge-
+notypes. The six pivotal pleiotropic QTLs represent mutualism type 
+(QTL22, 131, 237), competition type (QTL109), and comprehensive 
+type (QTL14, 50), illustrating the diverse genetic mechanisms underly -
+ing ETR and qN. This classification extends the traditional static division 
+to a dynamic pattern, allowing us to specifically study the regulation of 
+different QTLs during photosynthesis.
+3.9. Simulation calculation
+To verify the utility of the DDS model, we conducted a series of 
+simulation analysis to mimic the real example of Populus simonii as 
+described above. The area under the receiver operating characteristic 
+(ROC) curve (AUC) was calculated to assess the accuracy of QTL map-
+ping by using the DDS framework (Fig. S3a). Our model showed excel -
+lent performance under most conditions that the AUC value was lower 
+than 0.5 only when sample size n 30 and H2 0.05. The identification 
+effects were improved with higher heritability and larger sample size. In 
+Fig. 9a, a group with sample size n 100 reached an accuracy higher 
+than 0.99 even with a low heritability 0.05. This result further confirmed 
+the applicability of our model as the true sample size was 102 (Fig. S3b).
+We implemented another simulation experiment with sample size n 
+102 to explore the fitting properties under different heritability and 
+drew the growth curves of two traits. The parameter estimation results 
+were shown in Supplementary Table S3. With the increase in genetic 
+heritability, the precision improved, the standard deviation of various 
+parameters declined, and the simulation effect became more stable 
+(Figs. S3c and d).
+The trends of the estimated curves of two simulations were consistent 
+with those of the real curves (Figs. S3c and d), which suggested that the 
+genotype-specific curves estimated were reasonably convincing. The 
+simulation effect of the estimated curve of 0.10 heritability was obvi-
+ously better than that of the estimated curve of 0.05 heritability, when 
+H2 0.20, the effect of simulation was nearly consistent with real effect, 
+indicating that traits with higher heritability were more robust for DDS 
+model. Even traits with low heritability could be well explained in 
+general trend, which further proved stability of our model.
+4.Discussion
+Photosynthesis is one of the most important chemical reactions on 
+Earth, and understanding its genetic mechanism is crucial for improving forestry production and even the development of bionic machinery. 
+Chlorophyll fluorescence parameters, including our research objects 
+ETR and qN, reflect the interactive characteristics in PSII where oxygen 
+evolution by oxidation occurs during the process of photosynthesis 
+(Young et al., 2016 ; Shimada et al., 2022 ). ETR and qN, being complex 
+traits, involve genetic and environmental components along with their 
+intricate interactions (Wang et al., 2021 ). Various methods, such as 
+GWAS and system mapping, have been widely applied to visualize the 
+genetic patterns of complex traits in plants, animals, microorganisms, 
+and even humans. Through these methods, thousands of QTLs have been 
+discovered to play important roles in trait formation (Risch et al., 1996 ; 
+Klein et al., 2005 ; Cai et al., 2021 ; Hazzouri et al., 2019 ; Shimada et al., 
+2022 ; Tang et al., 2018 ; Fang et al., 2017 ; Li et al., 2019 ; Zhu et al., 
+2016 ; Scholz et al., 2022 ; Wu et al., 2011 ; Bo et al., 2014 ; Sun and Wu, 
+2015 ). In this article, we implemented the DDS model into system 
+mapping to characterize not only the direct effects of QTLs on pheno -
+types but also their impact on interactions, providing a general tool for 
+research on complex traits.
+The DDS framework focuses on the genetic mechanisms that govern 
+the interactions between complex traits, which is well suited for 
+capturing the dynamics of the entire process (Fig. 4a, b, c, d). It is 
+particularly powerful in detecting QTLs that play a role in the biological 
+coordination of competition and cooperation.
+We have successfully identified 250 QTLs under threshold sig1 and 
+78 QTLs under threshold sig2 in a natural population of Populus simonii 
+with a sample size of n 102 (Fig. 5a). Many of these QTLs have been 
+found to be located near candidate genes with well-defined biological 
+functions and have been interpreted through gene annotations. For 
+example, QTL3043608 controls an atypical kinase, resulting in a sig-
+nificant effect on plant salt tolerance through the regulation of reactive 
+oxygen species (ROS). Interestingly, as a controller, this QTL governs 
+numerous other QTLs while also being controlled by QTL4760793 
+simultaneously (Supplementary Table S2, Fig. 8d). This phenomenon 
+provides valuable insights into the functioning of genetic mechanisms. 
+Additionally, we identified 45 QTLs that were detected by both the DDS 
+framework and the GWAS method (Fig. 5), further supporting the 
+robustness of our findings. Another significant discovery is that non- 
+controllers (QTLs that are activated or inhibited) can have a signifi -
+cant genetic impact on ETR or qN through their regulation with other 
+QTLs, particularly when the threshold is tightened (Fig. 8). By analyzing 
+two mapping experiments of Populus simonii , we have discovered that 
+networks can be employed to dissect the interactions between ETR and 
+qN. Interestingly, even though the controllers in ETR and qN do not 
+intersect, they work together to balance the dynamic interaction 
+through their direct actions and mutual regulation.
+Genetic effects further help us trace the dynamic impact of pivotal 
+pleiotropic QTLs as light intensity increases (Fig. 9a, b, c, d). Different 
+QTLs exhibit a great diversity during the dynamic regulation process, 
+but there are also some commonalities, such as inflection points and 
+regulatory direction. These discoveries have inspired us to innovate a 
+new way to classify QTLs using a dynamic pattern (Fig. 9e). With this 
+classification, we can clearly depict the impact of a QTL throughout the 
+entire process of photosynthesis, rather than using traditional static 
+methods. Furthermore, simulation experiments demonstrate good Fig. 9.Genetic effects of six pivotal pleiotropic QTLs and a dynamic approach for the classification of pivotal pleiotropic QTLs. a The regulatory relationship 
+among six pivotal pleiotropic QTLs in the network of ETR (under sig 1). b The genetic effects of these QTLs for the network of ETR. c The regulatory relationship of 
+these QTLs in the network of qN (under sig 1). d The genetic effects of these QTLs for the network of qN. The additive effects were drawn in red, green and blue 
+curves. The red solid line represented the total effect, the green broken line displayed the independent effect, and the blue broken line displayed the interact effect. 
+Dominant effects were painted in purple, yellow and pink, respectively. The purple dotted broken line represented the total effect, the yellow dotted line displayed 
+the independent effect, and the pink dotted line displayed the interaction effect. e The interaction modes of six pivotal pleiotropic QTLs between ETR and qN. The 
+genetic effect of qN with light intensity was the horizontal axis, and the genetic effect of ETR was the vertical axis. The red solid line represented the total effect, the 
+green broken line displayed the effect of the independent effect, and the blue broken line displayed the effect of the interaction effects. The purple dotted broken line 
+represented the total effect, the yellow dotted line displayed the effect of the independent effect, and the pink dotted line displayed the effect of the interaction effect. 
+The QTL number was marked in the upper right corner of each plot. (For interpretation of the references to color in this figure legend, the reader is referred to the 
+Web version of this article.)K. Lu et al.                                                                                                                                                                                                                                       
+================================================================================
+PAGE 16
+================================================================================
+
+Plant Physiology and Biochemistry 221 (2025) 109616
+16statistical characteristics and high specificity (Fig. S3a). Our model 
+achieves high accuracy even with small heritability, as long as the 
+sample size exceeds 100. The fitting effects of the DDS model are vali-
+dated through numerical experiments (Fig. S3b), and the results show 
+even better performance with higher heritability.
+5.Conclusions
+The DDS framework offers a powerful tool for researchers to inves -
+tigate the genetic mechanisms underlying interactions among complex 
+traits. Moreover, it can be generalized to high-dimensional types, 
+allowing for the development of more precise predictive models for 
+dynamics and evolutionary rules. Although this paper focuses on chlo-
+rophyll fluorescence parameters, the underlying principles of the DDS 
+framework are applicable to various other aspects of interaction studies, 
+including photosynthetic phenotypes, growth phenotypes, and more. 
+Modern genetic mapping studies have reached a stage where their 
+integration into diverse disciplines of biology is crucial to maximize 
+their utility (Donnet and Samson, 2013 ). Furthermore, new discoveries 
+in genetic mapping have propelled advancements in other fields such as 
+dynamics, mechanics, and bionics (Schreier et al., 2015 ; Lewis, 2016 ; 
+Cai et al., 2021 ). There is no doubt that the results obtained from our 
+model can contribute to a better understanding of the genetic mecha -
+nisms driving the evolution of trait interactions. These findings have the 
+potential to advance relevant fields, including the study of interactive 
+actions.
+Author contributions
+K.L. and Z.Z. performed data analysis and wrote the manuscript. Z.H. 
+participated in the data analysis. C.B. collected the data and participated 
+in the data analysis. H.G. participated in the data simulation. L.J. guided 
+the data analysis and proposed modification suggestions. D.Z. designed 
+the experiment and supervised the study. Q.F. guided the calculation 
+work. X.Z. was convinced of the idea and designed the model and data 
+analysis. Y.S. designed the experiment and guided the data analysis. All 
+authors contributed through discussions and reviewed the manuscript.
+Funding
+This work was supported by 2023 Guiding Special Project of Beijing 
+Forestry University College of Science [grant numbers 2023BJFUL -
+XYYD-16], the subproject of the National Science and Technology Major 
+Project for IND (investigational new drug) [grant numbers 
+2019HXFWLIXY001], the National Natural Science Foundation of China 
+[grant numbers 61802009] and the Horizontal Subject [grant numbers 
+2017HXKFLIXY001].
+Declaration of competing interest
+The authors declare that they have no known competing financial 
+interests or personal relationships that could have appeared to influence 
+the work reported in this paper.
+Acknowledgments
+We would like to express our sincere gratitude to Professor Rongling 
+Wu for his valuable guidance and support throughout this research. We 
+are also deeply grateful to the numerous members of the College of 
+Biological Sciences and Technology for their contributions in collecting 
+the data used in this manuscript.
+Appendix A.Supplementary data
+Supplementary data to this article can be found online at https://doi. 
+org/10.1016/j.plaphy.2025.109616 .Data availability
+https://github.com/AnnZhouziyang/-Dynamic- 
+Interaction-of-Photosynthetic-Phenotypes-in-Woody-Plants
+References
+Agrawal, A.A., 2001. Phenotypic plasticity in the interactions and evolution of species. 
+Science 294 (5541), 321–326. https://doi.org/10.1126/science.1060701.
+Anderson, S.I., Barton, A.D., Clayton, S., Dutkiewicz, S., Rynearson, T.A., 2021. Marine 
+phytoplankton functional types exhibit diverse responses to thermal change. Nat. 
+Commun. 12 (1), 6143. https://doi.org/10.1038/s41467-021-26651-8.
+Baikie, T.K., Wey, L.T., Lawrence, J.M., Medipally, H., Reisner, E., Nowaczyk, M.M., 
+Friend, R.H., Howe, C.J., Schnedermann, C., Rao, A., Zhang, J.Z., 2023. 
+Photosynthesis re-wired on the pico-second timescale. Nature 615, 836–840. https:// 
+doi.org/10.1038/s41586-023-05763-9.
+Bailey-Serres, J., Parker, J.E., Ainsworth, E.A., Oldroyd, G.E.D., Schroeder, J.I., 2019. 
+Genetic strategies for improving crop yields. Nature 575 (7781), 109–118. https:// 
+doi.org/10.1038/s41586-019-1679-0.
+Barton, N.H., Keightley, P.D., 2002. Understanding quantitative genetic variation. Nat. 
+Rev. Genet. 3 (1), 11–21. https://doi.org/10.1038/nrg700.
+Bieluszewski, T., Sura, W., Dziegielewski, W., et al., 2022. NuA4 and H2A.Z control 
+environmental responses and autotrophic growth in Arabidopsis. Nat. Commun. 13, 
+277. https://doi.org/10.1038/s41467-021-27882-5.
+Bo, W., Fu, G., Wang, Z., Xu, F., Shen, Y., Xu, J., Huang, Z., Gai, J., Vallejos, C.E., Wu, R., 
+2014. Systems mapping: how to map genes for biomass allocation toward an 
+ideotype. Briefings Bioinf. 15 (4), 660–669. https://doi.org/10.1093/bib/bbs089.
+Cai, J., Zhao, L., He, C., Li, Y., Duan, C., 2021a. A host–guest semibiological 
+photosynthesis system coupling artificial and natural enzymes for solar alcohol 
+splitting. Nat. Commun. 12, 5092. https://doi.org/10.1038/s41467-021-25362-4.
+Cai, X., Sun, X., Xu, C., et al., 2021b. Genomic analyses provide insights into spinach 
+domestication and the genetic basis of agronomic traits. Nat. Commun. 12, 7246. 
+https://doi.org/10.1038/s41467-021-27432-z.
+Chen, L., Luo, J., Jin, M., Yang, N., et al., 2022. Genome sequencing reveals evidence of 
+adaptive variation in the genus Zea. Nat. Genet. 54, 1736–1745. https://doi.org/ 
+10.1038/s41588-022-01184-y.
+de Klein, N., Tsai, E.A., Vochteloo, M., et al., 2023. Brain expression quantitative trait 
+locus and network analyses reveal downstream effects and putative drivers for brain- 
+related diseases. Nat. Genet. 55, 377–388. https://doi.org/10.1038/s41588-023- 
+01300-6.
+de Oliveira Santos, M., Coelho, L.S., Carvalho, G.R., Botelho, C.E., Torres, L.F., Vilela, D. 
+J.M., Andrade, A.C., Silva, V.A., 2021. Photochemical efficiency correlated with 
+candidate gene expression promote coffee drought tolerance. Sci. Rep. 11 (1). 
+https://doi.org/10.1038/s41598-021-86689-y.
+Dong, C., Zhang, L., et al., 2023. Tiller Number1 encodes an ankyrin repeat protein that 
+controls tillering in bread wheat. Nat. Commun. 14, 836. https://doi.org/10.1038/ 
+s41467-023-36271-z.
+Donnet, S., Samson, A., 2013. A review on estimation of stochastic differential equations 
+for pharmaco-kinetic/pharmacodynamicmodels. Adv. Drug Deliv. Rev. 65, 929–939. 
+https://doi.org/10.1016/j.addr.2013.03.005.
+Evans, J.R., 2013. Improving photosynthesis. Plant Physiol. 162 (4), 1780–1793. https:// 
+doi.org/10.1104/pp.113.219006.
+Fang, L., Wang, Q., Hu, Y., Jia, Y., Chen, J., Liu, B., Zhang, Z., Guan, X., Chen, S., 
+Zhou, B., Mei, G., Sun, J., Pan, Z., He, S., Xiao, S., Shi, W., Gong, W., Liu, J., Ma, J., 
+Cai, C., Zhu, X., Guo, W., Du, X., Zhang, T., 2017. Genomic analyses in cotton 
+identify signatures of selection and loci associated with fiber quality and yield traits. 
+Nat. Genet. 49 (7), 1089–1098. https://doi.org/10.1038/ng.3887.
+Farooq, S., Chmeliov, J., Wientjes, E., Koehorst, R., Bader, A., Valkunas, L., 
+Trinkunas, G., van Amerongen, H., 2018. Dynamic feedback of the photosystem II 
+reaction centre on photoprotection in plants. Nat. Plants 4 (2), 225–231. https://doi. 
+org/10.1038/s41477-018-0127-8.
+Fernandes, L.D.S., Correa, F.M., Ingram, K.T., de Almeida, A.F., Royaert, S., 2020. QTL 
+mapping and identification of SNP-haplotypes affecting yield components of 
+Theobroma cacao L. Hortic. Res. 7 (1), 26–43. https://doi.org/10.1038/s41438-020- 
+0250-3.
+Flood, P.J., Harbinson, J., Aarts, M.G., 2011. Natural genetic variation in plant 
+photosynthesis. Trends Plant Sci. 16 (6), 327–335. https://doi.org/10.1016/j. 
+tplants.2011.02.005. Jun. 
+Fu, L., Sun, L., Hao, H., Jiang, L., Zhu, S., Ye, M., Tang, S., Huang, M., Wu, R., 2018. How 
+trees allocate carbon for optimal growth: insight from a game-theoretic model. 
+Briefings Bioinf. 19 (4), 593–602. https://doi.org/10.1093/bib/bbx003.
+Gu, X., Sun, Y., Tu, K., Dong, Q., Pan, L., 2016. Predicting the growth situation of 
+Pseudomonas aeruginosa on agar plates and meat stuffs using gas sensors. Sci. Rep. 6 
+(1), 38721. https://doi.org/10.1038/srep38721.
+Hazzouri, K.M., Gros-Balthazard, M., Flowers, J.M., Copetti, D., Lemansour, A., 
+Lebrun, M., Masmoudi, K., Ferrand, S., Dhar, M.I., Fresquez, Z.A., Rosas, U., 
+Zhang, J., Talag, J., Lee, S., Kudrna, D., Powell, R.F., Leitch, I.J., Krueger, R.R., 
+Wing, R.A., Amiri, K.M.A., Purugganan, M.D., 2019. Genome-wide association 
+mapping of date palm fruit traits. Nat. Commun. 10 (1), 4680. https://doi.org/ 
+10.1038/s41467-019-12604-9.
+Herlory, O., Bonzom, J.M., Gilbin, R., 2013. Sensitivity evaluation of the green alga 
+Chlamydomonas reinhardtii to uranium by pulse amplitude modulated (PAM) 
+fluorometry. Aquat. Toxicol. 140–141, 288–294. https://doi.org/10.1016/j. 
+aquatox.2013.06.007.K. Lu et al.                                                                                                                                                                                                                                       
+================================================================================
+PAGE 17
+================================================================================
+
+Plant Physiology and Biochemistry 221 (2025) 109616
+17Heyduk, K., Moreno-Villena, J.J., Gilman, I.S., Christin, P.A., Edwards, E.J., 2019. The 
+genetics of convergent evolution insights from plant photosynthesis. Nat. Rev. Genet. 
+20 (8), 485–493. https://doi.org/10.1038/s41576-019-0107-5 .
+Jian, Z., Zhou, X., Tian, J., 2020. Photosynthetic and chlorophyll fluorescence 
+characteristics of isodon rubescens (hemsley) H. Hara. Sci. Rep. 10 (1). https://doi. 
+org/10.1038/s41598-020-67192-2 .
+Jiang, L., He, X., Jin, Y., Ye, M., Sang, M., Chen, N., Zhu, J., Zhang, Z., Li, J., Wu, R., 
+2018. A mapping framework of competition –cooperation QTLs that drive 
+community dynamics. Nat Commun s 9 (1), 1–12. https://doi.org/10.1038/s41467- 
+018-05416-w .
+Jolma, A., Yan, J., Whitington, T., Toivonen, J., Nitta, K.R., Rastas, P., Morgunova, E., 
+Enge, M., Taipale, M., Wei, G., Palin, K., Vaquerizas, J.M., Vincentelli, R., 
+Luscombe, N.M., Hughes, T.R., Lemaire, P., Ukkonen, E., Kivioja, T., Taipale, J., 
+2013. DNA-binding specificities of human transcription factor. Cell 152 (1–2), 
+327–339. https://doi.org/10.1016/j.cell.2012.12.009 .
+Khunsriraksakul, C., Li, Q., Markus, H., Patrick, M.T., Sauteraud, R., McGuire, D., 
+Wang, X., Wang, C., Wang, L., Chen, S., Shenoy, G., Li, B., Zhong, X., Olsen, N.J., 
+Carrel, L., Tsoi, L.C., Jiang, B., Liu, D.J., 2023. Multi-ancestry and multi-trait 
+genome-wide association meta-analyses inform clinical risk prediction for systemic 
+lupus erythematosus. Nat. Commun. 14, 668. https://doi.org/10.1038/s41467-023- 
+36306-5 .
+Klein, R.J., Zeiss, C., Chew, E.Y., Tsai, J.Y., Sackler, R.S., Haynes, C., Henning, A.K., 
+SanGiovanni, J.P., Mane, S.M., Mayne, S.T., Bracken, M.B., Ferris, F.L., Ott, J., 
+Barnstable, C., Hoh, J., 2005. Complement factor H polymorphism in age-related 
+macular degeneration. Science 308 (5720), 385–389. https://doi.org/10.1126/ 
+science.1109557 .
+Krumbeck, Y., Yang, Q., Constable, G.W.A., 2021. Fluctuation spectra of large random 
+dynamical systems reveal hidden structure in ecological networks. Rogers T Nat. 
+Commun. 12 (1), 3625. https://doi.org/10.1038/s41467-021-23757-x .
+Lander, E., Botstein, D., 1989. Mapping mendelian factors underlying quantitative traits 
+using RFLP linkage maps. Genetics 121 (1), 185–199. https://doi.org/10.1093/ 
+genetics/121.1.185 .
+Lewis, Nathan S., 2016. Developing a scalable artificial photosynthesis technology 
+through nanomaterials by dsign. Nat. Nanotechnol. 11 (12), 1010. https://doi.org/ 
+10.1038/nnano.2016.194 .
+Li, H., Ribaut, J.M., Li, Z., Wang, J., 2008. Inclusive composite interval mapping (ICIM) 
+for digenic epistasis of quantitative traits in biparental populations. Theor. Appl. 
+Genet. 116 (2), 243–260. https://doi.org/10.1007/s00122-007-0663-5 .
+Li, K.L., Tang, R.J., Wang, C., Luan, S., 2023. Potassium nutrient status drives 
+posttranslational regulation of a low-K response network in Arabidopsis. Nat. 
+Commun. 14, 360. https://doi.org/10.1038/s41467-023-35906-5 .
+Li, N., Lin, B., Wang, H., Li, X., Yang, F., Ding, X., Yan, J., Chu, Z., 2019. Natural 
+variation in ZmFBL41 confers banded leaf and sheath blight resistance in maize. Nat. 
+Genet. 51 (10), 1–9. https://doi.org/10.1038/s41588-019-0503-y .
+Ma, C.X., Casella, G., Wu, R., 2002. Functional mapping of quantitative trait loci 
+underlying the character process: a theoretical framework. Genetics 161 (4), 
+1751 –1762. https://doi.org/10.1093/genetics/161.4.1751 .
+Mackay, T., 2014. Epistasis and quantitative traits: using model organisms to study 
+gene –gene interactions. Nat. Rev. Genet. 15 (1), 22. https://doi.org/10.1038/ 
+nrg3627 .
+Nam, H.I., Shahzad, Z., Dorone, Y., Clowez, S., Zhao, K., Bouain, N., Lay-Pruitt, K.S., 
+Cho, H., Rhee, S.Y., Rouached, H., 2021. Interdependent iron and phosphorus 
+availability controls photosynthesis through retrograde signaling. Nat. Commun. 12. 
+https://doi.org/10.1038/s41467-021-27548-2 .
+Paczkowski, M., Kretzschmar, W.W., Markelc, B., Liu, S.K., Kunz-Schughart, L.A., 
+Harris, A.L., Partridge, M., Byrne, H.M., Kannan, P., 2021. Reciprocal interactions 
+between tumour cell populations enhance growth and reduce radiation sensitivity in 
+prostate cancer. Commun. Biol. 4 (1), 6. https://doi.org/10.1038/s42003-020- 
+01529-5 .
+Perner, F., Stein, E.M., Wenge, D.V., Singh, S., Kim, J., Apazidis, A., Rahnamoun, H., 
+Anand, D., Marinaccio, C., Hatton, C., Wen, Y., Stone, R.M., Schaller, D., Mowla, S., 
+Xiao, W., Gamlen, H.A., Stonestrom, A.J., Persaud, S., Ener, E., Cutler, J.A., 
+Doench, J.G., McGeehan, G.M., Volkamer, A., Chodera, J.D., Nowak, R.P., Fischer, E. 
+S., Levine, R.L., Armstrong, S.A., Cai, S.F., 2023. MEN1 mutations mediate clinical 
+resistance to menin inhibition. Nature 615, 913–919. https://doi.org/10.1038/ 
+s41586-023-05755-9 .
+Petroutsos, D., Tokutsu, R., Maruyama, S., Flori, S., Greiner, A., Magneschi, L., Cusant, L., 
+Kottke, T., Mittag, M., Hegemann, P., Finazzi, G., Minagawa, J., 2016. A blue-light 
+photoreceptor mediates the feedback regulation of photosynthesis. Nature 537 
+(7621), 563–566. https://doi.org/10.1038/nature19358 .
+Risch, N., Merikarigas, K., 1996. The future of genetic studies of complex human 
+diseases. Science 273 (5281), 1516 –1517. https://doi.org/10.1126/ 
+science.273.5281.1516 .
+Scholz, M., Horn, K., Pott, J., Gross, A., Kleber, M.E., Delgado, G.E., Mishra, P.P., 
+Kirsten, H., Gieger, C., Müller-Nurasyid, M., Tonjes, A., Kovacs, P., Lehtim aki, T., 
+Raitakari, O., Kahonen, M., Gylling, H., Baber, R., Isermann, B., Stumvoll, M., 
+Loeffler, M., Marz, W., Meitinger, T., Peters, A., Thiery, J., Teupser, D., Ceglarek, U., 
+2022. Genome-wide meta-analysis of phytosterols reveals five novel loci and a 
+detrimental effect on coronary atherosclerosis. Nat. Commun. 13 (1), 143. https:// 
+doi.org/10.1038/s41467-021-27706-6 .
+Schreier, M., Curvat, L., Giordano, F., Steier, L., Abate, A., Zakeeruddin, S.M., Luo, J., 
+Mayer, M.T., Gratzel, M., 2015. Efficient photosynthesis of carbon monoxide from CO2 using perovskite photovoltaics. Nat. Commun. 6, 7326. https://doi.org/ 
+10.1038/ncomms8326 .
+Sharwood, R.E., Ghannoum, O., Kapralov, M.V., Gunn, L.H., Whitney, S.M., 2016. 
+Temperature responses of Rubisco from Paniceae grasses provide opportunities for 
+improving C3 photosynthesis. Nat. Plants 2 (12), 16186. https://doi.org/10.1038/ 
+nplants.2016.186 .
+Shimada, Y., Suzuki, T., Matsubara, T., Kitajima-Ihara, T., Nagao, R., Dohmae, N., 
+Noguchi, T., 2022. Post-translational amino acid conversion in photosystem II as a 
+possible origin of photosynthetic oxygen evolution. Nat. Commun. 13 (1), 4211. 
+https://doi.org/10.1038/s41467-022-31931-y .
+Stachowicz, J.J., 2001. Mutualism, facilitation, and the structure of ecological 
+communities. Bioscience 51, 235–246. https://doi.org/10.1641/0006-3568(2001) 
+051[0235:MFATSO]2.0.CO;2 .
+Stone, Lewi, 2016. The Google matrix controls the stability of structured ecological and 
+biological networks. Nat. Commun. 7 (1), 12857. https://doi.org/10.1038/ 
+ncomms12857 .
+Sun, G., Wase, N., Shu, S., Jenkins, J., Zhou, B., Torres-Rodríguez, J.V., Chen, C., 
+Sandor, L., Plott, C., Yoshinga, Y., Daum, C., Qi, P., Barry, K., Lipzen, A., Berry, L., 
+Pedersen, C., Gottilla, T., Foltz, A., Yu, H., O’Malley, R., Zhang, C., Devos, K.M., 
+Sigmon, B., Yu, B., Obata, T., Schmutz, J., Schnable, J.C., 2022. Genome of Paspalum 
+vaginatum and the role of trehalose mediated autophagy in increasing maize 
+biomass. Nat. Commun. 13, 7731. https://doi.org/10.1038/s41467-022-35507-8 .
+Sun, L., Wu, R., 2015. Mapping complex traits as a dynamic system - ScienceDirect. Phys. 
+Life Rev. 13, 155–185. https://doi.org/10.1016/j.plrev.2015.02.007 .
+Sun, S., Wang, T., Wang, L., Li, X., Jia, Y., Liu, C., Huang, X., Xie, W., Wang, X., 2018. 
+Natural selection of a GSK3 determines rice mesocotyl domestication by 
+coordinating strigolactone and brassinosteroid signaling. Nat. Commun. 9 (1), 1–13. 
+https://doi.org/10.1038/s41467-018-04952-9 .
+Tang, N., Shahzad, Z., Lonjon, F., Loudet, O., Vailleau, F., Maurel, C., 2018. Natural 
+variation at XND1 impacts root hydraulics and trade-off for stress responses in 
+Arabidopsis. Nat. Commun. 9 (1), 3884. https://doi.org/10.1038/s41467-018- 
+06430-8 .
+van Rooijen, R., Kruijer, W., Boesten, R., van Eeuwijk, F.A., Harbinson, J., Aarts, M.G.M., 
+2017. Natural variation of YELLOW SEEDLING1 affects photosynthetic acclimation 
+of Arabidopsis thaliana. Nat. Commun. 8 (1), 1421. https://doi.org/10.1038/ 
+s41467-017-01576-3 .
+Volterra, V., 1928. Variations and fluctuations of the number of individuals in animal 
+species living together. Jaarb. Consum. 3 (1), 3–51. https://doi.org/10.1093/ 
+icesjms/3.1.3 .
+Wang, H., Ye, M., Fu, Y., Dong, A., Zhang, M., Feng, L., Zhu, X., Bo, W., Jiang, L., 
+Griffin, C.H., Liang, D., Wu, R., 2021. Modeling genome-wide by environment 
+interactions through omnigenic interactome networks. Cell Rep. 35 (6), 109114. 
+https://doi.org/10.1016/j.celrep.2021.109114 .
+Wang, Y., Wang, X., Sun, S., Jin, C., Su, J., Wei, J., Luo, X., Wen, J., Wei, T., Sahu, S.K., 
+Zou, H., Chen, H., Mu, Z., Zhang, G., Liu, X., Xu, X., Gram, L., Yang, H., Wang, E., 
+Liu, H., 2022. GWAS, MWAS and mGWAS provide insights into precision agriculture 
+based on genotype-dependent microbial effects in foxtail millet. Nat. Commun. 13, 
+5913. https://doi.org/10.1038/s41467-022-33238-4 .
+West, G.B., Brown, J.H., Enquist, B.J., 2001. A general model for ontogenetic growth. 
+Nature 413 (6856), 628–631. https://doi.org/10.1038/35098076 .
+White, F.P., 1924. On certain nets of plane curves. Math. Proc. Camb. Phil. Soc. 22 (1), 1. 
+https://doi.org/10.1017/S0305004100000037 .
+Wu, R., Cao, J.G., Huang, Z.W., Wang, Z., Gai, J.Y., Vallejos, E., 2011. Systems mapping: 
+how to improve the genetic mapping of complex traits through design principles of 
+biological systems. BMC Syst. Biol. 5 (1), 84. https://doi.org/10.1186/1752-0509-5- 
+84.
+Wu, R., Jiang, L., 2021. Recovering dynamic networks in big static datasets. Biophys Rep 
+912 (6062). https://doi.org/10.1016/j.physrep.2021.01.003 .
+Wu, R., Lin, M., 2006. Functional mapping – how to map and study the genetic 
+architecture of dynamic complex traits. Nat. Rev. Genet. 7 (3), 229–237. https://doi. 
+org/10.1038/nrg1804 .
+Wu, R., Ma, C., George, C., 2007. Statistical Genetics of Quantitative Traits. Springer .
+Yoo, C.Y., Pasoreck, E.K., Wang, H., Cao, J., Blaha, G.M., Weigel, D., Chen, M., 2019. 
+Phytochrome activates the plastid-encoded RNA polymerase for chloroplast 
+biogenesis via nucleus-to-plastid signaling. Nat. Commun. 10 (1). https://doi.org/ 
+10.1038/s41467-019-10518-0 .
+Young, I.D., Ibrahim, M., Chatterjee, R., et al., 2016. Structure of photosystem II and 
+substrate binding at room temperature. Nature 540 (7633), 453–457. https://doi. 
+org/10.1038/nature20161 .
+Zeng, Z.-B., 1994. Precision mapping of quantitative trait loci. Genetics 136 (4). https:// 
+doi.org/10.1093/genetics/136.4.1457 .
+Zhang, J., Zhang, D., Fan, Y., Li, C., Xu, P., Li, W., Sun, Q., Huang, X., Zhang, C., Wu, L., 
+Yang, H., Wang, S., Su, X., Li, X., Song, Y., Wu, M.E., Lian, X., Li, Y., 2021a. The 
+identification of grain size genes by RapMap reveals directional selection during rice 
+domestication. Nat. Commun. 12 (1), 5673. https://doi.org/10.1038/s41467-021- 
+25961-1 .
+Zhang, P., Zhang, Z., Li, B., Zhang, H., Hu, J., Zhao, J., 2020. Photosynthetic rate 
+prediction model of newborn leaves verified by core fluorescence parameters. Sci. 
+Rep. 10 (1). https://doi.org/10.1038/s41598-020-59741-6 .
+Zhang, Y., Shen, Q., Leng, L., Zhang, D., Chen, S., Shi, Y., Ning, Z., Chen, S., 2021b. 
+Incipient diploidization of the medicinal plant Perilla within 10,000 years. Nat. 
+Commun. 12 (1), 5508. https://doi.org/10.1038/s41467-021-25681-6 .K. Lu et al.                                                                                                                                                                                                                                       
+================================================================================
+PAGE 18
+================================================================================
+
+Plant Physiology and Biochemistry 221 (2025) 109616
+18Zhao, L.S., Li, K., Wang, Q.M., Song, X.Y., Su, H.N., Xie, B.B., Zhang, X.Y., Huang, F., 
+Chen, X.L., Zhou, B.C., Zhang, Y.Z., 2017. Nitrogen starvation impacts the 
+photosynthetic performance of porphyridium cruentum as revealed by chlorophyll a 
+fluorescence. Sci. Rep. 7 (1). https://doi.org/10.1038/s41598-017-08428-6.
+Zhou, Y., Niu, R., Tang, Z., Mou, R., Wang, Z., Zhu, S., Yang, H., Ding, P., Xu, G., 2023. 
+Plant HEM1 specifies a condensation domain to control immune gene translation. 
+Nat. Plants 9, 289–301. https://doi.org/10.1038/s41477-023-01355-7.Zhu, J., 1999. Mixed model approaches of mapping genes for complex quantitative traits. 
+J Zhejiang Univ (Nat Sci) 3, 327–335 .
+Zhu, Z., Zhang, F., Hu, H., Bakshi, A., Robinson, M.R., Powell, J.E., Montgomery, G.W., 
+Goddard, M.E., Wray, N.R., Visscher, P.M., Yang, J., 2016. Integration of summary 
+data from GWAS and eQTL studies predicts complex trait gene targets. Nat. Genet. 
+48 (5), 481–487. https://doi.org/10.1038/ng.3538.K. Lu et al.                                                                                                                                                                                                                                       

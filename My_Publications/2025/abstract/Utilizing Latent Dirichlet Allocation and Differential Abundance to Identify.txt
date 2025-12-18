@@ -1,0 +1,67 @@
+
+================================================================================
+PAGE 1
+================================================================================
+
+DOI: 10.1002/alz.089296
+BASIC SCIENCE AND PATHOGENESIS
+POSTER PRESENTATION
+MOLECULAR AND CELL BIOLOGY
+Utilizing Latent Dirichlet Allocation and Differential
+Abundance to Identify Microbial Communities in both the Oral
+and Fecal Microbiome Associated with Alzheimer’s Disease
+Ziyuan Huang1Abigail L Zeamer2Doyle Ward1Cynthia Jo3Vanni Bucci2
+John P Haran2
+1UMass Chan Medical School, Worcester, MA,
+USA
+2University of Massachusetts Chan Medical
+School, Worcester, MA, USA
+3University of Massachusetts Chan Medical
+School Chan Medical School, Worcester, MA,
+USA
+Correspondence
+Ziyuan Huang, UMass Chan Medical School,
+Worcester, MA, USA.
+Email: Ziyuan.Huang2@umassmed.eduAbstract
+Background: Several studies have found that oral and gut microbiome and their
+byproducts can impact Alzheimer’s Disease (AD). The objective of our study is to
+analyze metagenomic sequencing data from paired oral and fecal microbiomes, along
+with clinical variables, to identify communities of bacteria associated with AD. This
+research aims to improve our understanding of the microbiome community matrix, and
+how these communities interact and correlate with AD status compared to healthy
+controls (HC) through an oral-gut microbial axis.
+Method: The study includes 223 HC and 43 individuals with AD. During each
+visit, paired oral and fecal samples were collected, along with clinical variables.
+Metagenomic profiling was done on all samples. Latent Dirichlet Allocation (LDA) was
+applied to identify differences in microbial species groups between these two body
+sites in realtion to AD status. LDA is used as a topic modeling method to uncover the
+complex structure and function of microbial communities. Subsequently, differential
+abundance (DA) analysis was performed to identify species with differential
+abundance at each body site.
+Result: We identified microbiotal communities sharing similar characteristics and
+pinpointed representative bacteria within these communities that are highly relevant
+to AD. Within the oral microbiome, we have identified 27 topics, including several
+bacteria that are highly relevant to AD. These included Alistipes (beta=3.919232e-01),
+Paraprevotella xylaniphila (beta =1.227791e-01), Desulfovibrio (beta =6.013213e-
+02), and Lachnospiraceae (beta =2.304369e-02). In the gut, we have identified 50
+topics, reflecting the gut is more complex the oral microbiome. Notable bacteria in
+the gut microbiome include Actinomyces oricola (beta=6.959554e-01), Roseburia (beta
+This is an open access article under the terms of the Creative Commons Attribution License, which permits use, distribution and reproduction in any medium, provided
+the original work is properly cited.
+© 2024 The Alzheimer’s Association. Alzheimer’s & Dementia published by Wiley Periodicals LLC on behalf of Alzheimer’s Association.
+Alzheimer’s Dement. 2024;20(Suppl. 1):e089296. wileyonlinelibrary.com/journal/alz 1o f2
+https://doi.org/10.1002/alz.089296
+
+================================================================================
+PAGE 2
+================================================================================
+
+2o f2 BASIC SCIENCE AND PATHOGENESIS
+=8.861444e-02), Bacteroidetes (beta =5.010610e-01), and Actinomyces gerencseriae
+(beta=3.048668e-02).
+Conclusion: Our study has identified a variety of bacteria that exhibit novel community
+patterns that associate with AD. In the gut, A. gerencseriae and other oral microbiomes
+were observed in AD patients. Also, the microbial communities differ between AD
+and HC. Thereforth, we conclude that translocation of oral and gut microbiota may
+contribute to AD through an oral-gut-microbiome axis.
+ 15525279, 2024, S1, Downloaded from https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/alz.089296 by University Of Massachusetts, Wiley Online Library on [18/12/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
