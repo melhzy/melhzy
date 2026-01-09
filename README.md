@@ -67,9 +67,14 @@ To cite my work, copy and paste the appropriate BibTeX entry below:
   title={ADAM-1: An AI Reasoning and Bioinformatics Model for Alzheimer's Disease Detection and Microbiome-Clinical Data Integration},
   author={Huang, Ziyuan and Sekhon, Vishaldeep Kaur and Sadeghian, Roozbeh and Vaida, Maria L. and Jo, Cynthia and McCormick, Beth A. and Ward, Doyle V. and Bucci, Vanni and Haran, John P.},
   journal={IEEE Access},
+  volume={13},
+  pages={145953--145967},
   year={2025},
+  month={August},
   publisher={IEEE},
-  doi={10.1109/ACCESS.2024.Doi Number}
+  doi={10.1109/ACCESS.2025.3599857},
+  pmid={41036149},
+  pmcid={PMC12483529}
 }
 ```
 
@@ -78,8 +83,13 @@ To cite my work, copy and paste the appropriate BibTeX entry below:
 @article{vaida2025multimodal,
   title={Multimodal Graph Neural Networks in Healthcare: A Review of Fusion Strategies Across Biomedical Domains},
   author={Vaida, Maria and Huang, Ziyuan},
-  journal={In Review},
-  year={2025}
+  journal={Frontiers in Artificial Intelligence},
+  volume={8},
+  pages={1716706},
+  year={2025},
+  month={January},
+  publisher={Frontiers Media SA},
+  doi={10.3389/frai.2025.1716706}
 }
 ```
 
