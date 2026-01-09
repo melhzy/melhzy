@@ -58,8 +58,6 @@ I'm interested in collaborations involving:
 
 [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=WgqFSKUAAAAJ&hl)
 
-View my complete publication record and citation metrics on [Google Scholar](https://scholar.google.com/citations?user=WgqFSKUAAAAJ&hl).
-
 ### Citations & Impact
 
 [![Google Scholar Citations](https://img.shields.io/badge/dynamic/json?logo=google-scholar&label=Citations&query=citedby&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fmelhzy%2Fmelhzy%40main%2Fcitations.json&style=flat-square&color=4285F4)](https://scholar.google.com/citations?user=WgqFSKUAAAAJ&hl)
@@ -68,7 +66,7 @@ View my complete publication record and citation metrics on [Google Scholar](htt
 
 ![Citations Per Year](citations_chart.svg)
 
-**Note:** Citation metrics are updated weekly via automated workflow. For real-time statistics, visit my [Google Scholar profile](https://scholar.google.com/citations?user=WgqFSKUAAAAJ&hl).
+> Metrics updated weekly via automated workflow. Visit [Google Scholar](https://scholar.google.com/citations?user=WgqFSKUAAAAJ&hl) for real-time data.
 
 📫 **Contact**: melhzy@gmail.com
 
