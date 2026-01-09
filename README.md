@@ -55,4 +55,113 @@ I'm interested in collaborations involving:
 
 ---
 
+## Citations & References
+
+To cite my work, copy and paste the appropriate BibTeX entry below:
+
+### 2025 Publications
+
+**ADAM-1: AI Reasoning Model for Alzheimer's Disease Detection**
+```bibtex
+@article{huang2025adam1,
+  title={ADAM-1: An AI Reasoning and Bioinformatics Model for Alzheimer's Disease Detection and Microbiome-Clinical Data Integration},
+  author={Huang, Ziyuan and Sekhon, Vishaldeep Kaur and Sadeghian, Roozbeh and Vaida, Maria L. and Jo, Cynthia and McCormick, Beth A. and Ward, Doyle V. and Bucci, Vanni and Haran, John P.},
+  journal={IEEE Access},
+  year={2025},
+  publisher={IEEE},
+  doi={10.1109/ACCESS.2024.Doi Number}
+}
+```
+
+**Multimodal Graph Neural Networks in Healthcare**
+```bibtex
+@article{vaida2025multimodal,
+  title={Multimodal Graph Neural Networks in Healthcare: A Review of Fusion Strategies Across Biomedical Domains},
+  author={Vaida, Maria and Huang, Ziyuan},
+  journal={In Review},
+  year={2025}
+}
+```
+
+**Oral-Gut Microbiome in Alzheimer's Disease (AAIC 2025)**
+```bibtex
+@inproceedings{huang2025aaic,
+  title={Utilizing Latent Dirichlet Allocation and Differential Abundance to Identify Microbial Communities in both the Oral and Fecal Microbiome Associated with Alzheimer's Disease},
+  author={Huang, Ziyuan and Zeamer, Abigail L. and Ward, Doyle and Jo, Cynthia and Bucci, Vanni and Haran, John P.},
+  booktitle={Alzheimer's Association International Conference (AAIC)},
+  year={2025},
+  doi={10.1002/alz.089296}
+}
+```
+
+**ASD-Cancer Framework Commentary**
+```bibtex
+@article{huang2025asd,
+  title={Decoding Cancer Prognosis with Deep Learning: The ASD-Cancer Framework for Tumor Microenvironment Analysis},
+  author={Huang, Ziyuan and Li, Yunzhan and Bucci, Vanni and Haran, John P.},
+  journal={mSystems},
+  volume={10},
+  number={5},
+  year={2025},
+  doi={10.1128/msystems.01455-24}
+}
+```
+
+**Urinary Microbiome in UTI**
+```bibtex
+@article{bradley2025urinary,
+  title={The Urinary Microbiome Distinguishes Symptomatic Urinary Tract Infection from Asymptomatic Older Adult Patients Presenting to the Emergency Department},
+  author={Bradley, Evan S. and Stansky, Celina and Zeamer, Abigail L. and Huang, Ziyuan and Cincotta, Lindsey and Lopes, Abigail and Potter, Linda and Fontes, Theresa and Ward, Doyle V. and Bucci, Vanni and McCormick, Beth A. and Haran, John P.},
+  journal={Virulence},
+  volume={16},
+  number={1},
+  pages={2546063},
+  year={2025},
+  doi={10.1080/21505594.2025.2546063}
+}
+```
+
+**Genetic Networks in Woody Plants**
+```bibtex
+@article{lu2025genetic,
+  title={Unveiling the Genetic Networks: Exploring the Dynamic Interaction of Photosynthetic Phenotypes in Woody Plants Across Varied Light Gradients},
+  author={Lu, Kaiyan and Zhou, Ziyang and Huang, Ziyuan and Bu, Chenhao and Gong, Huiying and Jiang, Libo and Zhang, Deqiang and Fang, Qing and Zhang, Xiao-Yu and Song, Yuepeng},
+  journal={Plant Physiology and Biochemistry},
+  volume={221},
+  pages={109616},
+  year={2025},
+  doi={10.1016/j.plaphy.2025.109616}
+}
+```
+
+### 2023 Publication
+
+**English Language Proficiency in Transnational Education**
+```bibtex
+@article{wang2023english,
+  title={English Language Proficiency, Prior Knowledge, and Student Success in an International Chinese Accounting Program},
+  author={Wang, Hui and Schultz, Jennifer Lynn and Huang, Ziyuan},
+  journal={Heliyon},
+  volume={9},
+  pages={e18596},
+  year={2023},
+  doi={10.1016/j.heliyon.2023.e18596}
+}
+```
+
+### 2020 Publication
+
+**Machine Learning for Photosynthetic Rate Prediction**
+```bibtex
+@article{zhang2020machine,
+  title={Machine Learning Models for Net Photosynthetic Rate Prediction Using Poplar Leaf Phenotype Data},
+  author={Zhang, Kai-Bo and Huang, Ziyuan and Sun, Shuai and Liu, Andrew and Song, Yuepeng and Zhang, Deqiang and Yang, Xing and Wang, Huiying},
+  journal={PLoS ONE},
+  year={2020},
+  doi={10.1371/journal.pone.0228645}
+}
+```
+
+---
+
 *This repository contains grant applications, publications, and computational tools from my Alzheimer's disease research program at UMass Chan Medical School.*
