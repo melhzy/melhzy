@@ -54,11 +54,9 @@ I'm interested in collaborations involving:
 - Deep learning for neurodegenerative diseases
 - Open-source platforms for data harmonization and interpretable analysis
 
-## Academic Profile
+## Academic Profile & Impact
 
 [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=WgqFSKUAAAAJ&hl)
-
-### Citations & Impact
 
 [![Google Scholar Citations](https://img.shields.io/badge/dynamic/json?logo=google-scholar&label=Citations&query=citedby&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fmelhzy%2Fmelhzy%40main%2Fcitations.json&style=flat-square&color=4285F4)](https://scholar.google.com/citations?user=WgqFSKUAAAAJ&hl)
 [![Google Scholar h-index](https://img.shields.io/badge/dynamic/json?logo=google-scholar&label=h--index&query=hindex&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fmelhzy%2Fmelhzy%40main%2Fcitations.json&style=flat-square&color=4285F4)](https://scholar.google.com/citations?user=WgqFSKUAAAAJ&hl)
