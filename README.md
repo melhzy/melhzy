@@ -51,6 +51,12 @@ I'm interested in collaborations involving:
 - Deep learning for neurodegenerative diseases
 - Open-source platforms for data harmonization and interpretable analysis
 
+## Academic Profile
+
+[![Google Scholar](https://img.shields.io/badge/Google%20Scholar-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=WgqFSKUAAAAJ&hl)
+
+View my complete publication record and citation metrics on [Google Scholar](https://scholar.google.com/citations?user=WgqFSKUAAAAJ&hl).
+
 📫 **Contact**: melhzy@gmail.com
 
 ---
