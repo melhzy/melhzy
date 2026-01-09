@@ -1,0 +1,36 @@
+name: Update Google Scholar Citations
+
+on:
+  schedule:
+    # Run every Sunday at 00:00 UTC
+    - cron: '0 0 * * 0'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  update-citations:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: |
+        pip install scholarly matplotlib pandas numpy requests
+        
+    - name: Update citations data and generate chart
+      run: |
+        python scripts/update_citations.py
+        
+    - name: Commit and push if changed
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add citations.json citations_chart.svg
+        git diff --staged --quiet || git commit -m "Update Google Scholar citations [automated]"
+        git push

@@ -63,7 +63,9 @@ View my complete publication record and citation metrics on [Google Scholar](htt
 [![Google Scholar h-index](https://img.shields.io/badge/dynamic/json?logo=google-scholar&label=h--index&query=hindex&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fmelhzy%2Fmelhzy%40main%2Fcitations.json&style=flat-square&color=4285F4)](https://scholar.google.com/citations?user=WgqFSKUAAAAJ&hl)
 [![Google Scholar i10-index](https://img.shields.io/badge/dynamic/json?logo=google-scholar&label=i10--index&query=i10index&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fmelhzy%2Fmelhzy%40main%2Fcitations.json&style=flat-square&color=4285F4)](https://scholar.google.com/citations?user=WgqFSKUAAAAJ&hl)
 
-**Note:** Citation metrics are updated regularly. For real-time statistics, please visit my [Google Scholar profile](https://scholar.google.com/citations?user=WgqFSKUAAAAJ&hl).
+![Citations Per Year](citations_chart.svg)
+
+**Note:** Citation metrics are updated weekly via automated workflow. For real-time statistics, visit my [Google Scholar profile](https://scholar.google.com/citations?user=WgqFSKUAAAAJ&hl).
 
 📫 **Contact**: melhzy@gmail.com
 
