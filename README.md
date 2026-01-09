@@ -1,6 +1,6 @@
 # Ziyuan Huang, PhD
 
-**Postdoctoral Associate** | UMass Chan Medical School  
+**Postdoctoral Associate** | UMass Chan Medical School
 PhD in Data Sciences | Greater Boston
 
 ## About Me
@@ -18,6 +18,7 @@ I apply artificial intelligence and deep learning to advance understanding of Al
 **Performance Standards**: Reproducible classification (AUC ≥0.80, F1 ≥0.70) with SHAP-based interpretability and literature concordance ≥80%.
 
 ### Key Research Areas
+
 - Oral-gut microbial axis in cognitive decline and systemic inflammation
 - Multimodal data integration for AD biomarker discovery
 - Explainable AI with biologically interpretable, literature-grounded insights
@@ -27,7 +28,7 @@ I apply artificial intelligence and deep learning to advance understanding of Al
 
 - **AI/ML**: Large language models (fine-tuning, RAG), ensemble methods (Random Forest, XGBoost, LightGBM), graph neural networks, explainable AI (SHAP)
 - **Computational Biology**: Metagenomic sequencing analysis, multi-omics integration, systems modeling, differential abundance methods
-- **Infrastructure**: GPU-accelerated workstations (NVIDIA H200), HPC clusters, containerization, version control, reproducible workflows
+- **Infrastructure**: GPU-accelerated workstations, HPC clusters, containerization, version control, reproducible workflows
 - **Tools**: Python, R, PyTorch, Hugging Face Transformers, QIIME2, MetaPhlAn, scikit-learn
 
 ## Publications & Impact
@@ -35,6 +36,7 @@ I apply artificial intelligence and deep learning to advance understanding of Al
 Contributing to federally-funded projects developing computational platforms for multimodal biomedical data analysis. Published peer-reviewed research on AI disease classification, microbiome analysis, and graph neural networks. Collaborating across clinical departments to analyze longitudinal patient data from large cohorts (GAINS: 260+ participants).
 
 Recent publications include:
+
 - ADAM-1 framework (IEEE Access, 2025)
 - Oral-gut microbiome axis in AD (AAIC 2025)
 - Multimodal graph neural networks for AD research
@@ -45,6 +47,7 @@ See [My_Publications/](My_Publications/) for full list.
 ## Collaboration Interests
 
 I'm interested in collaborations involving:
+
 - Multimodal AI for biomedical applications
 - Microbiome-brain axis research
 - Explainable AI in clinical settings
@@ -78,6 +81,7 @@ To cite my work, copy and paste the appropriate BibTeX entry below:
 ### 2025 Publications
 
 **ADAM-1: AI Reasoning Model for Alzheimer's Disease Detection**
+
 ```bibtex
 @article{huang2025adam1,
   title={ADAM-1: An AI Reasoning and Bioinformatics Model for Alzheimer's Disease Detection and Microbiome-Clinical Data Integration},
@@ -95,6 +99,7 @@ To cite my work, copy and paste the appropriate BibTeX entry below:
 ```
 
 **Multimodal Graph Neural Networks in Healthcare**
+
 ```bibtex
 @article{vaida2025multimodal,
   title={Multimodal Graph Neural Networks in Healthcare: A Review of Fusion Strategies Across Biomedical Domains},
@@ -110,6 +115,7 @@ To cite my work, copy and paste the appropriate BibTeX entry below:
 ```
 
 **Oral-Gut Microbiome in Alzheimer's Disease (AAIC 2025)**
+
 ```bibtex
 @inproceedings{huang2025aaic,
   title={Utilizing Latent Dirichlet Allocation and Differential Abundance to Identify Microbial Communities in both the Oral and Fecal Microbiome Associated with Alzheimer's Disease},
@@ -121,6 +127,7 @@ To cite my work, copy and paste the appropriate BibTeX entry below:
 ```
 
 **ASD-Cancer Framework Commentary**
+
 ```bibtex
 @article{huang2025asd,
   title={Decoding Cancer Prognosis with Deep Learning: The ASD-Cancer Framework for Tumor Microenvironment Analysis},
@@ -134,6 +141,7 @@ To cite my work, copy and paste the appropriate BibTeX entry below:
 ```
 
 **Urinary Microbiome in UTI**
+
 ```bibtex
 @article{bradley2025urinary,
   title={The Urinary Microbiome Distinguishes Symptomatic Urinary Tract Infection from Asymptomatic Older Adult Patients Presenting to the Emergency Department},
@@ -148,6 +156,7 @@ To cite my work, copy and paste the appropriate BibTeX entry below:
 ```
 
 **Genetic Networks in Woody Plants**
+
 ```bibtex
 @article{lu2025genetic,
   title={Unveiling the Genetic Networks: Exploring the Dynamic Interaction of Photosynthetic Phenotypes in Woody Plants Across Varied Light Gradients},
@@ -163,6 +172,7 @@ To cite my work, copy and paste the appropriate BibTeX entry below:
 ### 2023 Publication
 
 **English Language Proficiency in Transnational Education**
+
 ```bibtex
 @article{wang2023english,
   title={English Language Proficiency, Prior Knowledge, and Student Success in an International Chinese Accounting Program},
@@ -178,6 +188,7 @@ To cite my work, copy and paste the appropriate BibTeX entry below:
 ### 2020 Publication
 
 **Machine Learning for Photosynthetic Rate Prediction**
+
 ```bibtex
 @article{zhang2020machine,
   title={Machine Learning Models for Net Photosynthetic Rate Prediction Using Poplar Leaf Phenotype Data},
